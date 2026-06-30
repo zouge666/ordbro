@@ -1,0 +1,24 @@
+# Ordbro settings. Paths are relative to the project root.
+
+[app]
+host = "127.0.0.1"
+port = 8000
+data_dir = "data"
+state_dir = "var"
+web_dir = "web"
+
+[rag]
+# legacy | danish | ordbro  (see src/ordbro/rag/presets.py)
+preset = "ordbro"
+top_k = 5
+rrf_k = 60
+# answers with a lower confidence are not shown as an answer
+abstain_below = 0.12
+
+[llm]
+# "none" keeps everything offline. "openai-compatible" is optional.
+provider = "none"
+model = ""
+base_url = ""
+api_key_env = "ORDBRO_LLM_API_KEY"
+timeout = 20.0
