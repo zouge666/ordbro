@@ -1,0 +1,20 @@
+[
+  {"id": "greetings", "name": "Greetings", "name_da": "Hilsner", "level": "A1", "requires": [], "notes": ["a1-hilsner", "hos-bageren", "ny-kollega"], "about": "Say hello and goodbye and introduce yourself."},
+  {"id": "numbers_time", "name": "Numbers and time", "name_da": "Tal og klokken", "level": "A1", "requires": [], "notes": ["a1-tal", "a1-klokken", "a1-dage-og-tid"], "about": "Count, say the time and use days and months."},
+  {"id": "pronunciation", "name": "Pronunciation", "name_da": "Udtale", "level": "A1", "requires": [], "notes": ["a1-udtale"], "about": "Soft d, silent letters, vowels and the stød."},
+  {"id": "noun_gender", "name": "En and et", "name_da": "En-ord og et-ord", "level": "A1", "requires": [], "notes": ["a1-en-og-et"], "about": "Know if a noun is an en-word or an et-word."},
+  {"id": "present_tense", "name": "Present tense", "name_da": "Nutid", "level": "A1", "requires": [], "notes": ["a1-nutid"], "about": "Use verbs in the present tense with -r."},
+  {"id": "pronouns", "name": "Pronouns", "name_da": "Pronominer", "level": "A1", "requires": [], "notes": ["a1-pronominer"], "about": "Use jeg and mig, han and ham and the other pairs."},
+  {"id": "definite_form", "name": "Definite form", "name_da": "Bestemt form", "level": "A1", "requires": ["noun_gender"], "notes": ["a1-bestemt-form"], "about": "Say the car (bilen) and the house (huset)."},
+  {"id": "plural", "name": "Plural", "name_da": "Flertal", "level": "A1", "requires": ["noun_gender"], "notes": ["a1-flertal"], "about": "Make the plural with -er, -e or no ending."},
+  {"id": "modal_verbs", "name": "Modal verbs", "name_da": "Modalverber", "level": "A1", "requires": ["present_tense"], "notes": ["a1-modalverber"], "about": "Use kan, vil, skal and må with the infinitive."},
+  {"id": "questions", "name": "Questions", "name_da": "Spørgsmål", "level": "A1", "requires": ["present_tense"], "notes": ["a1-spoergsmaal"], "about": "Ask yes/no questions and questions with hv-words."},
+  {"id": "word_order", "name": "Word order", "name_da": "Ordstilling", "level": "A1", "requires": ["present_tense"], "notes": ["a1-ordstilling", "a2-saetninger"], "about": "Keep the verb in second place."},
+  {"id": "negation", "name": "Negation", "name_da": "Nægtelse", "level": "A2", "requires": ["word_order"], "notes": ["a2-naegtelse"], "about": "Put ikke in the right place."},
+  {"id": "adjectives", "name": "Adjectives", "name_da": "Adjektiver", "level": "A2", "requires": ["noun_gender", "definite_form"], "notes": ["a2-adjektiver"], "about": "Add -t and -e to adjectives."},
+  {"id": "past_tense", "name": "Past tense", "name_da": "Datid", "level": "A2", "requires": ["present_tense"], "notes": ["a2-datid", "weekenden"], "about": "Talk about yesterday with regular and irregular verbs."},
+  {"id": "perfect_tense", "name": "Perfect tense", "name_da": "Førnutid", "level": "A2", "requires": ["past_tense"], "notes": ["a2-foernutid"], "about": "Use har and er with the participle."},
+  {"id": "possessives", "name": "Possessives", "name_da": "Ejestedord", "level": "A2", "requires": ["pronouns", "noun_gender"], "notes": ["a2-ejestedord"], "about": "Use min, mit, mine and sin, sit, sine."},
+  {"id": "prepositions", "name": "Prepositions", "name_da": "Præpositioner", "level": "A2", "requires": [], "notes": ["a2-praepositioner"], "about": "Choose between i and på."},
+  {"id": "comparison", "name": "Comparing", "name_da": "Gradbøjning", "level": "A2", "requires": ["adjectives"], "notes": ["a2-gradboejning"], "about": "Say bigger, biggest, better and best."}
+]
