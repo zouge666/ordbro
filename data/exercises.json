@@ -1,0 +1,1305 @@
+[
+ {
+  "id": "greet-01",
+  "skill": "greetings",
+  "type": "choice",
+  "prompt": "How do you say 'good morning'?",
+  "options": [
+   "Godmorgen",
+   "Godaften",
+   "Farvel"
+  ],
+  "answers": [
+   "Godmorgen"
+  ],
+  "hint": "Morgen means morning.",
+  "explanation": "Godmorgen means good morning. Godaften means good evening.",
+  "level": "A1"
+ },
+ {
+  "id": "greet-02",
+  "skill": "greetings",
+  "type": "choice",
+  "prompt": "Someone asks 'Hvordan har du det?'. What do they want to know?",
+  "options": [
+   "How are you?",
+   "What is your name?",
+   "Where do you live?"
+  ],
+  "answers": [
+   "How are you?"
+  ],
+  "hint": "Hvordan means how.",
+  "level": "A1"
+ },
+ {
+  "id": "greet-03",
+  "skill": "greetings",
+  "type": "translate",
+  "prompt": "Write in Danish: 'My name is Ali.'",
+  "answers": [
+   "Jeg hedder Ali"
+  ],
+  "hint": "Use the verb hedde in the present tense.",
+  "explanation": "Jeg hedder Ali. The present tense of hedde is hedder.",
+  "level": "A1"
+ },
+ {
+  "id": "greet-04",
+  "skill": "greetings",
+  "type": "translate",
+  "prompt": "Write in Danish: 'Where do you live?'",
+  "answers": [
+   "Hvor bor du"
+  ],
+  "hint": "Start with the question word for 'where', then the verb.",
+  "explanation": "Hvor bor du? Question word, then verb, then subject.",
+  "level": "A1"
+ },
+ {
+  "id": "greet-05",
+  "skill": "greetings",
+  "type": "cloze",
+  "prompt": "Fill in the verb: 'I come from Syria.'",
+  "text": "Jeg ___ fra Syrien.",
+  "answers": [
+   "kommer"
+  ],
+  "hint": "The verb is komme. Add -r for the present tense.",
+  "level": "A1"
+ },
+ {
+  "id": "greet-06",
+  "skill": "greetings",
+  "type": "choice",
+  "prompt": "What do you say when you leave?",
+  "options": [
+   "Farvel",
+   "Goddag",
+   "Velkommen"
+  ],
+  "answers": [
+   "Farvel"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "greet-07",
+  "skill": "greetings",
+  "type": "cloze",
+  "prompt": "Ask for a name: 'What is your name?'",
+  "text": "Hvad ___ du?",
+  "answers": [
+   "hedder"
+  ],
+  "hint": "In Danish you say 'What are you called?'.",
+  "level": "A1"
+ },
+ {
+  "id": "time-01",
+  "skill": "numbers_time",
+  "type": "choice",
+  "prompt": "What time is 'halv fire'?",
+  "options": [
+   "3.30",
+   "4.30",
+   "4.15"
+  ],
+  "answers": [
+   "3.30"
+  ],
+  "hint": "Halv means half an hour before the hour.",
+  "explanation": "Halv fire is 3.30. Danes count the half hour towards the next hour.",
+  "level": "A1"
+ },
+ {
+  "id": "time-02",
+  "skill": "numbers_time",
+  "type": "choice",
+  "prompt": "How do you say 50 in Danish?",
+  "options": [
+   "halvtreds",
+   "femti",
+   "fyrre"
+  ],
+  "answers": [
+   "halvtreds"
+  ],
+  "explanation": "50 is halvtreds. 40 is fyrre.",
+  "level": "A1"
+ },
+ {
+  "id": "time-03",
+  "skill": "numbers_time",
+  "type": "translate",
+  "prompt": "Write 25 in Danish as one word.",
+  "answers": [
+   "femogtyve"
+  ],
+  "hint": "Say the ones first, then og, then the tens.",
+  "explanation": "25 is femogtyve: fem + og + tyve.",
+  "level": "A1"
+ },
+ {
+  "id": "time-04",
+  "skill": "numbers_time",
+  "type": "choice",
+  "prompt": "What time is 'kvart i otte'?",
+  "options": [
+   "7.45",
+   "8.15",
+   "8.45"
+  ],
+  "answers": [
+   "7.45"
+  ],
+  "hint": "Kvart i means a quarter before.",
+  "level": "A1"
+ },
+ {
+  "id": "time-05",
+  "skill": "numbers_time",
+  "type": "choice",
+  "prompt": "Which day comes after onsdag?",
+  "options": [
+   "torsdag",
+   "tirsdag",
+   "fredag"
+  ],
+  "answers": [
+   "torsdag"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "time-06",
+  "skill": "numbers_time",
+  "type": "translate",
+  "prompt": "Write in Danish: 'tomorrow'",
+  "answers": [
+   "i morgen"
+  ],
+  "hint": "It is two words and starts with i.",
+  "level": "A1"
+ },
+ {
+  "id": "time-07",
+  "skill": "numbers_time",
+  "type": "choice",
+  "prompt": "Which sentence is written correctly?",
+  "options": [
+   "Jeg kommer på mandag.",
+   "Jeg kommer på Mandag."
+  ],
+  "answers": [
+   "Jeg kommer på mandag."
+  ],
+  "explanation": "Days and months are written with a small letter in Danish.",
+  "level": "A1"
+ },
+ {
+  "id": "pron-01",
+  "skill": "pronouns",
+  "type": "choice",
+  "prompt": "Han ringer til ___ i morgen. (me)",
+  "options": [
+   "mig",
+   "jeg",
+   "min"
+  ],
+  "answers": [
+   "mig"
+  ],
+  "hint": "After a word like til you need the object form.",
+  "explanation": "Jeg is the subject form. Mig is the object form.",
+  "level": "A1"
+ },
+ {
+  "id": "pron-02",
+  "skill": "pronouns",
+  "type": "choice",
+  "prompt": "Kan du hjælpe ___? (us)",
+  "options": [
+   "os",
+   "vi",
+   "vores"
+  ],
+  "answers": [
+   "os"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "pron-03",
+  "skill": "pronouns",
+  "type": "choice",
+  "prompt": "___ bor i Odense. (she)",
+  "options": [
+   "Hun",
+   "Hende",
+   "Hendes"
+  ],
+  "answers": [
+   "Hun"
+  ],
+  "hint": "It is the subject of the sentence.",
+  "level": "A1"
+ },
+ {
+  "id": "pron-04",
+  "skill": "pronouns",
+  "type": "choice",
+  "prompt": "Jeg kan godt lide ___. (him)",
+  "options": [
+   "ham",
+   "han",
+   "hans"
+  ],
+  "answers": [
+   "ham"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "pron-05",
+  "skill": "pronouns",
+  "type": "cloze",
+  "prompt": "Fill in the pronoun: 'We see them at the weekend.'",
+  "text": "Vi ser ___ i weekenden.",
+  "answers": [
+   "dem"
+  ],
+  "hint": "They is de. What is the object form?",
+  "level": "A1"
+ },
+ {
+  "id": "pron-06",
+  "skill": "pronouns",
+  "type": "choice",
+  "prompt": "Hvor bor ___? (you, more than one person)",
+  "options": [
+   "I",
+   "i",
+   "jer"
+  ],
+  "answers": [
+   "I"
+  ],
+  "explanation": "I with a capital letter means you, when you talk to more than one person.",
+  "level": "A1"
+ },
+ {
+  "id": "ques-01",
+  "skill": "questions",
+  "type": "order",
+  "prompt": "Build the question: 'Where do you live?'",
+  "tokens": [
+   "bor",
+   "hvor",
+   "du"
+  ],
+  "answers": [
+   "hvor bor du"
+  ],
+  "hint": "Question word first, then the verb.",
+  "explanation": "Hvor bor du? The verb comes before the subject.",
+  "level": "A1"
+ },
+ {
+  "id": "ques-02",
+  "skill": "questions",
+  "type": "order",
+  "prompt": "Build the question: 'Do you speak Danish?'",
+  "tokens": [
+   "dansk",
+   "du",
+   "taler"
+  ],
+  "answers": [
+   "taler du dansk"
+  ],
+  "hint": "In a yes/no question the verb comes first.",
+  "level": "A1"
+ },
+ {
+  "id": "ques-03",
+  "skill": "questions",
+  "type": "choice",
+  "prompt": "Which question word means 'when'?",
+  "options": [
+   "hvornår",
+   "hvorfor",
+   "hvordan"
+  ],
+  "answers": [
+   "hvornår"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "ques-04",
+  "skill": "questions",
+  "type": "choice",
+  "prompt": "Which question is correct?",
+  "options": [
+   "Hvad hedder du?",
+   "Hvad du hedder?",
+   "Hedder hvad du?"
+  ],
+  "answers": [
+   "Hvad hedder du?"
+  ],
+  "hint": "The verb comes right after the question word.",
+  "level": "A1"
+ },
+ {
+  "id": "ques-05",
+  "skill": "questions",
+  "type": "cloze",
+  "prompt": "Fill in: 'How many children do you have?'",
+  "text": "___ mange børn har du?",
+  "answers": [
+   "hvor"
+  ],
+  "hint": "How many is two words in Danish.",
+  "level": "A1"
+ },
+ {
+  "id": "ques-06",
+  "skill": "questions",
+  "type": "order",
+  "prompt": "Build the question: 'When does the bus come?'",
+  "tokens": [
+   "bussen",
+   "hvornår",
+   "kommer"
+  ],
+  "answers": [
+   "hvornår kommer bussen"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "order-01",
+  "skill": "word_order",
+  "type": "order",
+  "prompt": "Build the sentence: 'Today I go to school.' Start with 'i dag'.",
+  "tokens": [
+   "går",
+   "jeg",
+   "i dag",
+   "i skole"
+  ],
+  "answers": [
+   "i dag går jeg i skole"
+  ],
+  "hint": "The verb must be in place 2.",
+  "explanation": "When i dag comes first, the verb comes before the subject: I dag går jeg i skole.",
+  "level": "A1"
+ },
+ {
+  "id": "order-02",
+  "skill": "word_order",
+  "type": "choice",
+  "prompt": "Which sentence is correct?",
+  "options": [
+   "I morgen arbejder jeg.",
+   "I morgen jeg arbejder.",
+   "Jeg i morgen arbejder."
+  ],
+  "answers": [
+   "I morgen arbejder jeg."
+  ],
+  "hint": "Count the places. Where is the verb?",
+  "level": "A1"
+ },
+ {
+  "id": "order-03",
+  "skill": "word_order",
+  "type": "order",
+  "prompt": "Build the sentence: 'In the morning she drinks coffee.'",
+  "tokens": [
+   "drikker",
+   "om morgenen",
+   "kaffe",
+   "hun"
+  ],
+  "answers": [
+   "om morgenen drikker hun kaffe"
+  ],
+  "hint": "Om morgenen is place 1. What comes in place 2?",
+  "level": "A1"
+ },
+ {
+  "id": "order-04",
+  "skill": "word_order",
+  "type": "choice",
+  "prompt": "Når jeg kommer hjem, ___",
+  "options": [
+   "spiser jeg.",
+   "jeg spiser."
+  ],
+  "answers": [
+   "spiser jeg."
+  ],
+  "hint": "A subordinate clause at the start counts as place 1.",
+  "explanation": "Når jeg kommer hjem is place 1, so the verb comes next: spiser jeg.",
+  "level": "A1"
+ },
+ {
+  "id": "order-05",
+  "skill": "word_order",
+  "type": "order",
+  "prompt": "Build the sentence: 'That is why I learn Danish.'",
+  "tokens": [
+   "lærer",
+   "derfor",
+   "dansk",
+   "jeg"
+  ],
+  "answers": [
+   "derfor lærer jeg dansk"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "order-06",
+  "skill": "word_order",
+  "type": "choice",
+  "prompt": "Jeg er træt, men ___",
+  "options": [
+   "jeg arbejder i dag.",
+   "arbejder jeg i dag."
+  ],
+  "answers": [
+   "jeg arbejder i dag."
+  ],
+  "hint": "Men does not count as place 1.",
+  "explanation": "Og, men, eller and for do not change the word order.",
+  "level": "A2"
+ },
+ {
+  "id": "order-07",
+  "skill": "word_order",
+  "type": "order",
+  "prompt": "Build the sentence: 'If it rains, we stay at home.'",
+  "tokens": [
+   "hvis det regner,",
+   "vi",
+   "bliver",
+   "hjemme"
+  ],
+  "answers": [
+   "hvis det regner bliver vi hjemme"
+  ],
+  "hint": "The whole hvis part is place 1.",
+  "level": "A2"
+ },
+ {
+  "id": "neg-01",
+  "skill": "negation",
+  "type": "choice",
+  "prompt": "Which sentence is correct?",
+  "options": [
+   "Jeg spiser ikke kød.",
+   "Jeg ikke spiser kød."
+  ],
+  "answers": [
+   "Jeg spiser ikke kød."
+  ],
+  "hint": "In a main clause ikke comes after the verb.",
+  "level": "A2"
+ },
+ {
+  "id": "neg-02",
+  "skill": "negation",
+  "type": "choice",
+  "prompt": "Jeg bliver hjemme, fordi ___",
+  "options": [
+   "jeg ikke har tid.",
+   "jeg har ikke tid."
+  ],
+  "answers": [
+   "jeg ikke har tid."
+  ],
+  "hint": "After fordi, ikke comes before the verb.",
+  "explanation": "Fordi starts a subordinate clause. There ikke comes before the verb.",
+  "level": "A2"
+ },
+ {
+  "id": "neg-03",
+  "skill": "negation",
+  "type": "order",
+  "prompt": "Build the sentence: 'I can not come tomorrow.'",
+  "tokens": [
+   "komme",
+   "jeg",
+   "ikke",
+   "kan",
+   "i morgen"
+  ],
+  "answers": [
+   "jeg kan ikke komme i morgen"
+  ],
+  "hint": "Ikke comes after the first verb.",
+  "level": "A2"
+ },
+ {
+  "id": "neg-04",
+  "skill": "negation",
+  "type": "choice",
+  "prompt": "Hun siger, at ___",
+  "options": [
+   "hun ikke kan komme.",
+   "hun kan ikke komme."
+  ],
+  "answers": [
+   "hun ikke kan komme."
+  ],
+  "hint": "At starts a subordinate clause.",
+  "level": "A2"
+ },
+ {
+  "id": "neg-05",
+  "skill": "negation",
+  "type": "order",
+  "prompt": "Build the sentence: 'I never drink coffee.'",
+  "tokens": [
+   "kaffe",
+   "aldrig",
+   "jeg",
+   "drikker"
+  ],
+  "answers": [
+   "jeg drikker aldrig kaffe"
+  ],
+  "hint": "Aldrig goes where ikke would go.",
+  "level": "A2"
+ },
+ {
+  "id": "neg-06",
+  "skill": "negation",
+  "type": "order",
+  "prompt": "Build the sentence: 'Today I do not work.' Start with 'i dag'.",
+  "tokens": [
+   "arbejder",
+   "jeg",
+   "i dag",
+   "ikke"
+  ],
+  "answers": [
+   "i dag arbejder jeg ikke"
+  ],
+  "hint": "Verb in place 2, then the subject, then ikke.",
+  "level": "A2"
+ },
+ {
+  "id": "modal-01",
+  "skill": "modal_verbs",
+  "type": "choice",
+  "prompt": "Jeg kan ___ dansk.",
+  "options": [
+   "tale",
+   "taler",
+   "at tale"
+  ],
+  "answers": [
+   "tale"
+  ],
+  "hint": "After kan the verb has no -r and no at.",
+  "explanation": "After a modal verb the next verb is in the infinitive: Jeg kan tale dansk.",
+  "level": "A1"
+ },
+ {
+  "id": "modal-02",
+  "skill": "modal_verbs",
+  "type": "cloze",
+  "prompt": "Fill in: 'We have to work tomorrow.' (arbejde)",
+  "text": "Vi skal ___ i morgen.",
+  "answers": [
+   "arbejde"
+  ],
+  "hint": "After skal you use the infinitive.",
+  "level": "A1"
+ },
+ {
+  "id": "modal-03",
+  "skill": "modal_verbs",
+  "type": "choice",
+  "prompt": "What does 'Man må ikke ryge her' mean?",
+  "options": [
+   "You may not smoke here.",
+   "You do not have to smoke here.",
+   "You can smoke here."
+  ],
+  "answers": [
+   "You may not smoke here."
+  ],
+  "explanation": "Må ikke means that something is not allowed.",
+  "level": "A1"
+ },
+ {
+  "id": "modal-04",
+  "skill": "modal_verbs",
+  "type": "translate",
+  "prompt": "Write in Danish: 'Can you help me?'",
+  "answers": [
+   "Kan du hjælpe mig"
+  ],
+  "hint": "Start with the verb, because it is a yes/no question.",
+  "level": "A1"
+ },
+ {
+  "id": "modal-05",
+  "skill": "modal_verbs",
+  "type": "choice",
+  "prompt": "Jeg vil gerne ___ en kop kaffe.",
+  "options": [
+   "have",
+   "har",
+   "at have"
+  ],
+  "answers": [
+   "have"
+  ],
+  "hint": "Vil is a modal verb.",
+  "level": "A1"
+ },
+ {
+  "id": "modal-06",
+  "skill": "modal_verbs",
+  "type": "cloze",
+  "prompt": "Fill in: 'You may come in.'",
+  "text": "Du ___ gerne komme ind.",
+  "answers": [
+   "må"
+  ],
+  "hint": "This modal verb means may or be allowed to.",
+  "level": "A1"
+ },
+ {
+  "id": "poss-01",
+  "skill": "possessives",
+  "type": "choice",
+  "prompt": "Peter kysser ___ kone. (his own wife)",
+  "options": [
+   "sin",
+   "hans",
+   "sit"
+  ],
+  "answers": [
+   "sin"
+  ],
+  "hint": "The owner is the subject of the sentence.",
+  "explanation": "Sin points back to the subject. Hans kone would be another man's wife.",
+  "level": "A2"
+ },
+ {
+  "id": "poss-02",
+  "skill": "possessives",
+  "type": "choice",
+  "prompt": "Jeg har ___ hus. (my)",
+  "options": [
+   "mit",
+   "min",
+   "mine"
+  ],
+  "answers": [
+   "mit"
+  ],
+  "hint": "Hus is an et-word.",
+  "level": "A2"
+ },
+ {
+  "id": "poss-03",
+  "skill": "possessives",
+  "type": "choice",
+  "prompt": "Han elsker ___ børn. (his own)",
+  "options": [
+   "sine",
+   "sin",
+   "hans"
+  ],
+  "answers": [
+   "sine"
+  ],
+  "hint": "Børn is plural.",
+  "level": "A2"
+ },
+ {
+  "id": "poss-04",
+  "skill": "possessives",
+  "type": "choice",
+  "prompt": "___ kone hedder Mette. (his)",
+  "options": [
+   "Hans",
+   "Sin"
+  ],
+  "answers": [
+   "Hans"
+  ],
+  "explanation": "Sin can not be part of the subject.",
+  "level": "A2"
+ },
+ {
+  "id": "poss-05",
+  "skill": "possessives",
+  "type": "choice",
+  "prompt": "De besøger ___ venner. (their)",
+  "options": [
+   "deres",
+   "sine",
+   "dem"
+  ],
+  "answers": [
+   "deres"
+  ],
+  "hint": "With de you do not use sin or sine.",
+  "level": "A2"
+ },
+ {
+  "id": "poss-06",
+  "skill": "possessives",
+  "type": "cloze",
+  "prompt": "Fill in: 'Where are my keys?'",
+  "text": "Hvor er ___ nøgler?",
+  "answers": [
+   "mine"
+  ],
+  "hint": "Nøgler is plural.",
+  "level": "A2"
+ },
+ {
+  "id": "prep-01",
+  "skill": "prepositions",
+  "type": "choice",
+  "prompt": "Jeg bor ___ København.",
+  "options": [
+   "i",
+   "på"
+  ],
+  "answers": [
+   "i"
+  ],
+  "explanation": "Cities and countries use i.",
+  "level": "A2"
+ },
+ {
+  "id": "prep-02",
+  "skill": "prepositions",
+  "type": "choice",
+  "prompt": "Hun arbejder ___ et hospital.",
+  "options": [
+   "på",
+   "i"
+  ],
+  "answers": [
+   "på"
+  ],
+  "level": "A2"
+ },
+ {
+  "id": "prep-03",
+  "skill": "prepositions",
+  "type": "choice",
+  "prompt": "Vi mødes ___ biblioteket.",
+  "options": [
+   "på",
+   "i"
+  ],
+  "answers": [
+   "på"
+  ],
+  "level": "A2"
+ },
+ {
+  "id": "prep-04",
+  "skill": "prepositions",
+  "type": "choice",
+  "prompt": "Han flyttede til Danmark ___ tre år siden.",
+  "options": [
+   "for",
+   "i",
+   "om"
+  ],
+  "answers": [
+   "for"
+  ],
+  "hint": "A week ago is for en uge siden.",
+  "level": "A2"
+ },
+ {
+  "id": "prep-05",
+  "skill": "prepositions",
+  "type": "choice",
+  "prompt": "Jeg drikker kaffe ___ morgenen.",
+  "options": [
+   "om",
+   "på",
+   "i"
+  ],
+  "answers": [
+   "om"
+  ],
+  "explanation": "Om morgenen means in the morning, every day.",
+  "level": "A2"
+ },
+ {
+  "id": "prep-06",
+  "skill": "prepositions",
+  "type": "choice",
+  "prompt": "Min familie bor ___ Fyn.",
+  "options": [
+   "på",
+   "i"
+  ],
+  "answers": [
+   "på"
+  ],
+  "explanation": "Islands use på: på Fyn, på Bornholm.",
+  "level": "A2"
+ },
+ {
+  "id": "comp-01",
+  "skill": "comparison",
+  "type": "choice",
+  "prompt": "Bussen er ___ end toget. (billig)",
+  "options": [
+   "billigere",
+   "billigst",
+   "billig"
+  ],
+  "answers": [
+   "billigere"
+  ],
+  "hint": "With end you need the -ere form.",
+  "level": "A2"
+ },
+ {
+  "id": "comp-02",
+  "skill": "comparison",
+  "type": "cloze",
+  "prompt": "Fill in the last form.",
+  "text": "god, bedre, ___",
+  "answers": [
+   "bedst"
+  ],
+  "hint": "God is irregular.",
+  "level": "A2"
+ },
+ {
+  "id": "comp-03",
+  "skill": "comparison",
+  "type": "choice",
+  "prompt": "København er den ___ by i Danmark.",
+  "options": [
+   "største",
+   "størst",
+   "stor"
+  ],
+  "answers": [
+   "største"
+  ],
+  "hint": "After den the superlative gets -e.",
+  "level": "A2"
+ },
+ {
+  "id": "comp-04",
+  "skill": "comparison",
+  "type": "cloze",
+  "prompt": "Fill in the middle form.",
+  "text": "gammel, ___, ældst",
+  "answers": [
+   "ældre"
+  ],
+  "hint": "Gammel is irregular.",
+  "level": "A2"
+ },
+ {
+  "id": "comp-05",
+  "skill": "comparison",
+  "type": "choice",
+  "prompt": "Min bror er ___ end mig. (ung)",
+  "options": [
+   "yngre",
+   "ungere",
+   "yngst"
+  ],
+  "answers": [
+   "yngre"
+  ],
+  "level": "A2"
+ },
+ {
+  "id": "sound-01",
+  "skill": "pronunciation",
+  "type": "choice",
+  "prompt": "Which letter is silent in 'hvad'?",
+  "options": [
+   "h",
+   "v",
+   "d"
+  ],
+  "answers": [
+   "h"
+  ],
+  "explanation": "In hv- words the h is silent: hvad, hvor, hvem.",
+  "level": "A1"
+ },
+ {
+  "id": "sound-02",
+  "skill": "pronunciation",
+  "type": "choice",
+  "prompt": "Which word has a silent d?",
+  "options": [
+   "hund",
+   "dag",
+   "dansk"
+  ],
+  "answers": [
+   "hund"
+  ],
+  "explanation": "After n and l the d is often silent: hund, mand, kold.",
+  "level": "A1"
+ },
+ {
+  "id": "sound-03",
+  "skill": "pronunciation",
+  "type": "choice",
+  "prompt": "How does the d in 'mad' sound?",
+  "options": [
+   "soft, almost like th in 'the'",
+   "hard, like d in 'dog'",
+   "it is silent"
+  ],
+  "answers": [
+   "soft, almost like th in 'the'"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "sound-04",
+  "skill": "pronunciation",
+  "type": "choice",
+  "prompt": "Which pair do you tell apart by the stød?",
+  "options": [
+   "hun / hund",
+   "bil / bilen",
+   "jeg / mig"
+  ],
+  "answers": [
+   "hun / hund"
+  ],
+  "explanation": "Hun has no stød. Hund has a stød, and the d is silent.",
+  "level": "A1"
+ },
+ {
+  "id": "sound-05",
+  "skill": "pronunciation",
+  "type": "choice",
+  "prompt": "How does the ending -lig in 'dejlig' sound?",
+  "options": [
+   "like 'li'",
+   "like 'lig' with a hard g",
+   "like 'lik'"
+  ],
+  "answers": [
+   "like 'li'"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "past-01",
+  "skill": "past_tense",
+  "type": "cloze",
+  "prompt": "Fill in the past tense of gå.",
+  "text": "I går ___ jeg til arbejde.",
+  "answers": [
+   "gik"
+  ],
+  "hint": "Gå is irregular.",
+  "level": "A2"
+ },
+ {
+  "id": "past-02",
+  "skill": "past_tense",
+  "type": "cloze",
+  "prompt": "Fill in the past tense of spise.",
+  "text": "Vi ___ pizza i lørdags.",
+  "answers": [
+   "spiste"
+  ],
+  "hint": "Spise is in group 2 (-te).",
+  "level": "A2"
+ },
+ {
+  "id": "past-03",
+  "skill": "past_tense",
+  "type": "cloze",
+  "prompt": "Fill in the past tense of bo.",
+  "text": "Hun ___ i Syrien før.",
+  "answers": [
+   "boede"
+  ],
+  "hint": "Bo is in group 1 (-ede).",
+  "level": "A2"
+ },
+ {
+  "id": "past-04",
+  "skill": "past_tense",
+  "type": "cloze",
+  "prompt": "Fill in the past tense of se.",
+  "text": "Jeg ___ en god film i weekenden.",
+  "answers": [
+   "så"
+  ],
+  "hint": "Se is irregular.",
+  "level": "A2"
+ },
+ {
+  "id": "past-05",
+  "skill": "past_tense",
+  "type": "choice",
+  "prompt": "I går ___ jeg meget træt. (være)",
+  "options": [
+   "var",
+   "er",
+   "værede"
+  ],
+  "answers": [
+   "var"
+  ],
+  "level": "A2"
+ },
+ {
+  "id": "perf-01",
+  "skill": "perfect_tense",
+  "type": "choice",
+  "prompt": "Han ___ kommet hjem.",
+  "options": [
+   "er",
+   "har"
+  ],
+  "answers": [
+   "er"
+  ],
+  "hint": "Komme is a verb of movement.",
+  "level": "A2"
+ },
+ {
+  "id": "perf-02",
+  "skill": "perfect_tense",
+  "type": "choice",
+  "prompt": "Jeg ___ spist.",
+  "options": [
+   "har",
+   "er"
+  ],
+  "answers": [
+   "har"
+  ],
+  "level": "A2"
+ },
+ {
+  "id": "perf-03",
+  "skill": "perfect_tense",
+  "type": "cloze",
+  "prompt": "Fill in the participle of bo.",
+  "text": "Hun har ___ i Danmark i to år.",
+  "answers": [
+   "boet"
+  ],
+  "level": "A2"
+ },
+ {
+  "id": "perf-04",
+  "skill": "perfect_tense",
+  "type": "choice",
+  "prompt": "Which sentence is correct?",
+  "options": [
+   "I går spiste jeg fisk.",
+   "I går har jeg spist fisk."
+  ],
+  "answers": [
+   "I går spiste jeg fisk."
+  ],
+  "explanation": "With a time like i går you use the past tense.",
+  "level": "A2"
+ },
+ {
+  "id": "adj-01",
+  "skill": "adjectives",
+  "type": "choice",
+  "prompt": "et ___ ord (dansk)",
+  "options": [
+   "dansk",
+   "danskt",
+   "danske"
+  ],
+  "answers": [
+   "dansk"
+  ],
+  "explanation": "Adjectives ending in -sk do not get -t.",
+  "level": "A2"
+ },
+ {
+  "id": "adj-02",
+  "skill": "adjectives",
+  "type": "choice",
+  "prompt": "to ___ biler (lille)",
+  "options": [
+   "små",
+   "lille",
+   "lilla"
+  ],
+  "answers": [
+   "små"
+  ],
+  "explanation": "Lille is irregular. The plural is små.",
+  "level": "A2"
+ },
+ {
+  "id": "adj-03",
+  "skill": "adjectives",
+  "type": "cloze",
+  "prompt": "Fill in gammel in the right form.",
+  "text": "Huset er ___.",
+  "answers": [
+   "gammelt"
+  ],
+  "hint": "Hus is an et-word.",
+  "level": "A2"
+ },
+ {
+  "id": "adj-04",
+  "skill": "adjectives",
+  "type": "choice",
+  "prompt": "den ___ bil (rød)",
+  "options": [
+   "røde",
+   "rød",
+   "rødt"
+  ],
+  "answers": [
+   "røde"
+  ],
+  "hint": "After den the adjective gets -e.",
+  "level": "A2"
+ },
+ {
+  "id": "pres-01",
+  "skill": "present_tense",
+  "type": "cloze",
+  "prompt": "Fill in arbejde in the present tense.",
+  "text": "Hun ___ på et hospital.",
+  "answers": [
+   "arbejder"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "pres-02",
+  "skill": "present_tense",
+  "type": "cloze",
+  "prompt": "Fill in bo in the present tense.",
+  "text": "Vi ___ i København.",
+  "answers": [
+   "bor"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "pres-03",
+  "skill": "present_tense",
+  "type": "cloze",
+  "prompt": "Fill in tale in the present tense.",
+  "text": "Jeg ___ dansk og arabisk.",
+  "answers": [
+   "taler"
+  ],
+  "level": "A1"
+ },
+ {
+  "id": "pres-04",
+  "skill": "present_tense",
+  "type": "cloze",
+  "prompt": "Fill in vide in the present tense.",
+  "text": "Han ___ ikke, hvor stationen er.",
+  "answers": [
+   "ved"
+  ],
+  "hint": "Vide is irregular in the present tense.",
+  "level": "A1"
+ },
+ {
+  "id": "def-01",
+  "skill": "definite_form",
+  "type": "choice",
+  "prompt": "Jeg har en bil. ___ er rød.",
+  "options": [
+   "Bilen",
+   "Den bil",
+   "Bilet"
+  ],
+  "answers": [
+   "Bilen"
+  ],
+  "hint": "Bil is an en-word.",
+  "level": "A1"
+ },
+ {
+  "id": "def-02",
+  "skill": "definite_form",
+  "type": "cloze",
+  "prompt": "Fill in 'the house'.",
+  "text": "Vi bor i et hus. ___ er gammelt.",
+  "answers": [
+   "huset"
+  ],
+  "hint": "Hus is an et-word.",
+  "level": "A1"
+ },
+ {
+  "id": "plur-01",
+  "skill": "plural",
+  "type": "cloze",
+  "prompt": "Fill in the plural of barn.",
+  "text": "Jeg har to ___.",
+  "answers": [
+   "børn"
+  ],
+  "hint": "Barn has an irregular plural.",
+  "level": "A1"
+ },
+ {
+  "id": "plur-02",
+  "skill": "plural",
+  "type": "choice",
+  "prompt": "tre ___ (mand)",
+  "options": [
+   "mænd",
+   "mander",
+   "mande"
+  ],
+  "answers": [
+   "mænd"
+  ],
+  "hint": "Mand has an irregular plural.",
+  "level": "A1"
+ },
+ {
+  "id": "gender-01",
+  "skill": "noun_gender",
+  "type": "choice",
+  "prompt": "Which sentence is written correctly?",
+  "options": [
+   "Jeg har en hund.",
+   "Jeg har en Hund."
+  ],
+  "answers": [
+   "Jeg har en hund."
+  ],
+  "explanation": "Nouns are written with a small letter in Danish.",
+  "level": "A1"
+ }
+]
