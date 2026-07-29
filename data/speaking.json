@@ -1,0 +1,164 @@
+[
+ {
+  "id": "say-01",
+  "text": "Hej, jeg hedder Anna.",
+  "en": "Hello, my name is Anna.",
+  "level": "A1"
+ },
+ {
+  "id": "say-02",
+  "text": "Hvad hedder du?",
+  "en": "What is your name?",
+  "level": "A1"
+ },
+ {
+  "id": "say-03",
+  "text": "Jeg kommer fra Syrien.",
+  "en": "I come from Syria.",
+  "level": "A1"
+ },
+ {
+  "id": "say-04",
+  "text": "Hvor bor du?",
+  "en": "Where do you live?",
+  "level": "A1"
+ },
+ {
+  "id": "say-05",
+  "text": "Jeg bor i Brøndby.",
+  "en": "I live in Brøndby.",
+  "level": "A1"
+ },
+ {
+  "id": "say-06",
+  "text": "Hvordan har du det?",
+  "en": "How are you?",
+  "level": "A1"
+ },
+ {
+  "id": "say-07",
+  "text": "Tak for mad.",
+  "en": "Thank you for the meal.",
+  "level": "A1"
+ },
+ {
+  "id": "say-08",
+  "text": "Vi ses i morgen.",
+  "en": "See you tomorrow.",
+  "level": "A1"
+ },
+ {
+  "id": "say-09",
+  "text": "Klokken er halv tre.",
+  "en": "It is half past two.",
+  "level": "A1"
+ },
+ {
+  "id": "say-10",
+  "text": "Jeg vil gerne have en kop kaffe.",
+  "en": "I would like a cup of coffee.",
+  "level": "A1"
+ },
+ {
+  "id": "say-11",
+  "text": "Min søster har en hund.",
+  "en": "My sister has a dog.",
+  "level": "A1"
+ },
+ {
+  "id": "say-12",
+  "text": "Hun har en hund.",
+  "en": "She has a dog.",
+  "level": "A1"
+ },
+ {
+  "id": "say-13",
+  "text": "Manden har en stor hund.",
+  "en": "The man has a big dog.",
+  "level": "A1"
+ },
+ {
+  "id": "say-14",
+  "text": "Det er en dejlig dag i dag.",
+  "en": "It is a lovely day today.",
+  "level": "A1"
+ },
+ {
+  "id": "say-15",
+  "text": "Hvornår kører bussen?",
+  "en": "When does the bus leave?",
+  "level": "A1"
+ },
+ {
+  "id": "say-16",
+  "text": "Kan jeg betale med kort?",
+  "en": "Can I pay by card?",
+  "level": "A1"
+ },
+ {
+  "id": "say-17",
+  "text": "Undskyld, hvor er toilettet?",
+  "en": "Excuse me, where is the toilet?",
+  "level": "A1"
+ },
+ {
+  "id": "say-18",
+  "text": "Hvor mange børn har du?",
+  "en": "How many children do you have?",
+  "level": "A1"
+ },
+ {
+  "id": "say-19",
+  "text": "Mit barn går i skole.",
+  "en": "My child goes to school.",
+  "level": "A1"
+ },
+ {
+  "id": "say-20",
+  "text": "Jeg skal på arbejde i morgen.",
+  "en": "I am going to work tomorrow.",
+  "level": "A1"
+ },
+ {
+  "id": "say-21",
+  "text": "Vi spiser rugbrød til frokost.",
+  "en": "We eat rye bread for lunch.",
+  "level": "A2"
+ },
+ {
+  "id": "say-22",
+  "text": "Jeg kan godt lide at læse bøger.",
+  "en": "I like to read books.",
+  "level": "A2"
+ },
+ {
+  "id": "say-23",
+  "text": "Jeg har ondt i hovedet.",
+  "en": "I have a headache.",
+  "level": "A2"
+ },
+ {
+  "id": "say-24",
+  "text": "Jeg forstår ikke. Kan du sige det igen?",
+  "en": "I do not understand. Can you say it again?",
+  "level": "A2"
+ },
+ {
+  "id": "say-25",
+  "text": "Jeg er lige kommet til Danmark.",
+  "en": "I have just come to Denmark.",
+  "level": "A2"
+ },
+ {
+  "id": "say-26",
+  "text": "Bussen kører hvert femte minut.",
+  "en": "The bus runs every five minutes.",
+  "level": "A2"
+ },
+ {
+  "id": "say-27",
+  "text": "Rødgrød med fløde.",
+  "en": "Red berry pudding with cream.",
+  "level": "A2"
+ }
+]
