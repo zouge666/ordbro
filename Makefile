@@ -1,12 +1,16 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: install test lint format serve eval
+.PHONY: install test test-py lint format serve eval
 
 install:
 	python3 -m venv .venv
 	$(PYTHON) -m pip install -e ".[dev]"
 
 test:
+	$(PYTHON) -m pytest
+	node --test web/tests/*.test.mjs
+
+test-py:
 	$(PYTHON) -m pytest
 
 lint:

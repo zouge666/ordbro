@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ordbro</title>
+  <meta name="description" content="An offline assistant for learning Danish.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/views.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/today" aria-label="Ordbro, go to today">
+        <span class="brand-mark" data-icon="bridge"></span>
+        <span class="brand-name">Ordbro</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#/today" data-view="today"><span data-icon="today"></span>Today</a>
+        <a href="#/practice" data-view="practice"><span data-icon="practice"></span>Practice</a>
+        <a href="#/speak" data-view="speak"><span data-icon="speak"></span>Speak</a>
+        <a href="#/ask" data-view="ask"><span data-icon="ask"></span>Ask</a>
+        <a href="#/write" data-view="write"><span data-icon="write"></span>Write</a>
+        <a href="#/progress" data-view="progress"><span data-icon="progress"></span>Progress</a>
+        <a href="#/lab" data-view="lab"><span data-icon="lab"></span>Lab</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="mini-progress">
+          <div class="mini-label"><span id="mini-label">Skills</span><span id="mini-count">0 / 18</span></div>
+          <div class="meter"><span id="mini-meter" style="width:0%"></span></div>
+        </div>
+        <button class="nav-button" id="open-settings" type="button"><span data-icon="settings"></span>Settings</button>
+        <p class="offline-note"><span class="dot"></span>Runs offline. Your data stays on this computer.</p>
+      </div>
+    </aside>
+    <main id="main" class="main" tabindex="-1" aria-live="off"></main>
+  </div>
+  <nav class="tabbar" aria-label="Main">
+    <a href="#/today" data-view="today"><span data-icon="today"></span>Today</a>
+    <a href="#/practice" data-view="practice"><span data-icon="practice"></span>Practice</a>
+    <a href="#/speak" data-view="speak"><span data-icon="speak"></span>Speak</a>
+    <a href="#/ask" data-view="ask"><span data-icon="ask"></span>Ask</a>
+    <a href="#/write" data-view="write"><span data-icon="write"></span>Write</a>
+  </nav>
+  <div id="live" class="sr-only" aria-live="polite"></div>
+
+  <dialog id="settings" class="dialog" aria-labelledby="settings-title">
+    <form method="dialog" class="dialog-body">
+      <header class="dialog-head">
+        <h2 id="settings-title">Settings</h2>
+        <button class="icon-button" value="close" aria-label="Close settings"><span data-icon="close"></span></button>
+      </header>
+      <fieldset class="setting">
+        <legend>Theme</legend>
+        <div class="segmented" role="radiogroup">
+          <label><input type="radio" name="theme" value="system"><span>System</span></label>
+          <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+          <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="setting">
+        <legend>Text size</legend>
+        <div class="segmented" role="radiogroup">
+          <label><input type="radio" name="size" value="normal"><span>Normal</span></label>
+          <label><input type="radio" name="size" value="large"><span>Large</span></label>
+          <label><input type="radio" name="size" value="xlarge"><span>Extra large</span></label>
+        </div>
+      </fieldset>
+      <label class="switch"><input type="checkbox" name="contrast"><span>High contrast</span></label>
+      <label class="switch"><input type="checkbox" name="spacing"><span>Wider letter and line spacing</span></label>
+      <label class="switch"><input type="checkbox" name="english"><span>Show English help texts</span></label>
+      <label class="switch"><input type="checkbox" name="motion"><span>Reduce motion</span></label>
+      <p class="muted small">Settings are saved in this browser only.</p>
+    </form>
+  </dialog>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
