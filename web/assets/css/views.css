@@ -79,3 +79,81 @@
 
 .kbd-hint { font-size: 0.8rem; color: var(--ink-3); }
 .kbd-hint kbd { font-family: var(--font-mono); font-size: 0.75rem; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 0 0.3rem; background: var(--surface-2); }
+
+/* Speak -------------------------------------------------------------------- */
+
+.speak-card { padding: 2rem; display: flex; flex-direction: column; gap: 1.2rem; }
+.speak-target { font-family: var(--font-da); font-size: 2.1rem; line-height: 1.25; }
+.speak-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.record { min-width: 9.5rem; }
+.record.on { background: var(--clay); border-color: var(--clay); color: #fff; }
+.record.on svg { animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.4; } }
+.heard { font-family: var(--font-da); font-size: 1.1rem; color: var(--ink-2); min-height: 1.6rem; }
+.word-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.word-chip { font-family: var(--font-da); font-size: 1.2rem; padding: 0.3rem 0.7rem; border-radius: 9px; border: 1px solid var(--line); }
+.word-chip.ok { background: var(--moss-soft); border-color: transparent; }
+.word-chip.close { background: var(--amber-soft); border-color: transparent; }
+.word-chip.missed { background: var(--clay-soft); border-color: transparent; }
+.word-chip.extra { color: var(--ink-3); text-decoration: line-through; }
+.word-chip small { display: block; font-family: var(--font); font-size: 0.72rem; color: var(--ink-3); }
+.score { display: flex; align-items: center; gap: 1rem; }
+.score .ring { width: 72px; height: 72px; }
+.tip { display: flex; flex-direction: column; gap: 0.35rem; }
+.tip h3 { font-size: 0.98rem; }
+.sentence-list { display: flex; flex-direction: column; gap: 2px; max-height: 26rem; overflow: auto; }
+.sentence-list button { text-align: left; border: 0; background: none; padding: 0.55rem 0.7rem; border-radius: 9px; cursor: pointer; font-family: var(--font-da); color: var(--ink-2); }
+.sentence-list button:hover { background: var(--fjord-soft); color: var(--ink); }
+.sentence-list button[aria-current="true"] { background: var(--surface); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.speak-layout { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 1rem; align-items: start; }
+@media (max-width: 960px) { .speak-layout { grid-template-columns: 1fr; } }
+
+/* Ask ---------------------------------------------------------------------- */
+
+.ask-box { display: flex; gap: 0.6rem; }
+.ask-box .input { font-size: 1.15rem; padding: 0.9rem 1.1rem; border-radius: 999px; }
+.examples { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.examples button { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 0.3rem 0.8rem; font-size: 0.88rem; cursor: pointer; color: var(--ink-2); }
+.examples button:hover { border-color: var(--fjord); color: var(--ink); }
+.answer-lines { display: flex; flex-direction: column; gap: 0.45rem; font-family: var(--font-da); font-size: 1.2rem; line-height: 1.45; }
+.answer-lines mark, .passage mark { background: var(--fjord-soft); color: inherit; border-radius: 4px; padding: 0 2px; }
+.passage { border-top: 1px solid var(--line); padding: 0.9rem 0; display: flex; flex-direction: column; gap: 0.35rem; }
+.passage:first-child { border-top: 0; }
+.passage .text { font-family: var(--font-da); white-space: pre-line; color: var(--ink-2); font-size: 0.97rem; }
+.route { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-3); }
+details.trace summary { cursor: pointer; color: var(--ink-2); font-weight: 560; }
+details.trace[open] summary { margin-bottom: 0.7rem; }
+.trace-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.trace-table th, .trace-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.trace-table th { color: var(--ink-3); font-weight: 560; }
+.word-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.6rem; }
+.word-mini { border: 1px solid var(--line); border-radius: 12px; padding: 0.8rem; background: var(--surface-2); }
+.word-mini .w { font-family: var(--font-da); font-size: 1.25rem; }
+
+/* Write -------------------------------------------------------------------- */
+
+.marked { font-family: var(--font-da); font-size: 1.25rem; line-height: 1.8; white-space: pre-wrap; }
+.marked .err { text-decoration: underline wavy var(--clay); text-underline-offset: 5px; background: var(--clay-soft); border-radius: 4px; padding: 0 2px; }
+.issue { display: flex; gap: 0.9rem; padding: 0.9rem 0; border-top: 1px solid var(--line); }
+.issue:first-child { border-top: 0; }
+.issue .change { font-family: var(--font-da); font-size: 1.1rem; }
+.issue .change del { color: var(--clay); }
+.issue .change ins { color: var(--moss); text-decoration: none; font-weight: 600; }
+.issue-num { width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--clay-soft); color: var(--clay); display: grid; place-items: center; font-size: 0.8rem; font-weight: 650; flex: none; }
+.note-box { margin-top: 0.5rem; }
+
+/* Progress ----------------------------------------------------------------- */
+
+.skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.8rem; }
+.skill-card { display: flex; flex-direction: column; gap: 0.55rem; padding: 1.1rem; }
+.skill-card.locked { opacity: 0.62; }
+.skill-card .top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+.skill-card .name-da { font-family: var(--font-da); color: var(--ink-3); }
+.history { display: flex; flex-direction: column; }
+.history-row { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr) auto; gap: 0.7rem; padding: 0.5rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; align-items: center; }
+.history-row:first-child { border-top: 0; }
+.history-row .mark { width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--line-strong); }
+.history-row .mark.yes { background: var(--moss); }
+.history-row .mark.no { background: var(--clay); }
+
+:root[data-english="hide"] [data-english] { display: none; }

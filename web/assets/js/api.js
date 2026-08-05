@@ -33,8 +33,8 @@ export const api = {
   note: (docId) => request("GET", `/api/notes/${encodeURIComponent(docId)}`),
   check: (text) => request("POST", "/api/write/check", { text }),
   sentences: () => request("GET", "/api/speak/sentences"),
-  assess: (sentenceId, target, transcript) =>
-    request("POST", "/api/speak/assess", { learner: LEARNER, sentence_id: sentenceId, target, transcript }),
+  assess: (sentenceId, target, transcript, alternatives = []) =>
+    request("POST", "/api/speak/assess", { learner: LEARNER, sentence_id: sentenceId, target, transcript, alternatives }),
   feedback: (event) => request("POST", "/api/feedback", { learner: LEARNER, ...event }),
   feedbackSummary: () => request("GET", "/api/feedback/summary"),
   lab: () => request("GET", "/api/lab"),
