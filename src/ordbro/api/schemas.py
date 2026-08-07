@@ -33,6 +33,7 @@ class AssessRequest(BaseModel):
     sentence_id: str | None = Field(None, max_length=40)
     target: str = Field(..., min_length=1, max_length=300)
     transcript: str = Field("", max_length=500)
+    alternatives: list[str] = Field(default_factory=list, max_length=5)
 
 
 class FeedbackRequest(BaseModel):

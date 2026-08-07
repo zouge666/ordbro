@@ -78,7 +78,11 @@ class KnowledgeBase:
         glossary: Mapping[str, Sequence[str]] | None = None,
         rrf_k: int = 60,
         ollama: OllamaEmbedder | None = None,
+        confidence_on: str = "index_text",
     ) -> None:
+        if confidence_on not in {"index_text", "text"}:
+            raise ValueError("confidence_on must be 'index_text' or 'text'")
+        self.confidence_on = confidence_on
         self.preset = get_preset(preset)
         self.documents = {doc.id: doc for doc in documents}
         self.rrf_k = rrf_k
@@ -124,8 +128,13 @@ class KnowledgeBase:
             self._routes[route] = (encoder, index)
             trace.stage(f"vectors:{route}", kind=encoder.kind)
 
-        self._confidence.fit(chunk.text for chunk in self.chunks)
-        self._confidence_vectors = {c.id: self._confidence.transform(c.text) for c in self.chunks}
+        # The confidence vectors use the same text as the indexes by default, so
+        # an English question can match the English title and summary.
+        field = self.confidence_on
+        self._confidence.fit(getattr(chunk, field) for chunk in self.chunks)
+        self._confidence_vectors = {
+            c.id: self._confidence.transform(getattr(c, field)) for c in self.chunks
+        }
         trace.stage("confidence_vectors")
         self.ingestion_trace = trace.to_dict()
 

@@ -10,6 +10,7 @@ the score for grading.
 from __future__ import annotations
 
 import re
+from collections.abc import Sequence
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
@@ -45,6 +46,7 @@ class Assessment:
     wer: float
     cer: float
     tips: list[dict[str, str]]
+    used_alternative: int = 0
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -60,7 +62,21 @@ def words(text: str) -> list[str]:
     return output
 
 
-def assess(target: str, transcript: str) -> Assessment:
+def assess(target: str, transcript: str, alternatives: Sequence[str] = ()) -> Assessment:
+    """Score the transcript, or the best of the recognizer's alternatives.
+
+    Recognizers return a short n-best list. Using the best match lowers the
+    number of words that are flagged only because the recognizer guessed
+    wrong (see the speech study in eval/).
+    """
+    candidates = [transcript, *(alt for alt in alternatives if alt and alt != transcript)]
+    results = [_assess_one(target, candidate) for candidate in candidates]
+    best = max(range(len(results)), key=lambda i: (results[i].score, -i))
+    results[best].used_alternative = best
+    return results[best]
+
+
+def _assess_one(target: str, transcript: str) -> Assessment:
     ref = words(target)
     hyp = words(transcript)
     shown = _WORD.findall(target)

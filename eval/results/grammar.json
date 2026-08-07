@@ -1,0 +1,100 @@
+{
+ "sentences": {
+  "with_error": 56,
+  "correct": 40
+ },
+ "detection_recall": 0.9464,
+ "detection_precision": 1.0,
+ "f1": 0.9725,
+ "rule_accuracy": 0.9464,
+ "fix_accuracy": 0.9464,
+ "false_alarm_rate": 0.0,
+ "per_rule": {
+  "adjective-agreement": {
+   "n": 6,
+   "detected": 6,
+   "rule": 6,
+   "fix": 6
+  },
+  "article-gender": {
+   "n": 5,
+   "detected": 5,
+   "rule": 5,
+   "fix": 5
+  },
+  "capital-noun": {
+   "n": 5,
+   "detected": 5,
+   "rule": 5,
+   "fix": 5
+  },
+  "capital-word": {
+   "n": 4,
+   "detected": 4,
+   "rule": 4,
+   "fix": 4
+  },
+  "double-definite": {
+   "n": 4,
+   "detected": 4,
+   "rule": 4,
+   "fix": 4
+  },
+  "english-word": {
+   "n": 3,
+   "detected": 3,
+   "rule": 3,
+   "fix": 3
+  },
+  "modal-infinitive": {
+   "n": 6,
+   "detected": 5,
+   "rule": 5,
+   "fix": 5
+  },
+  "negation-placement": {
+   "n": 5,
+   "detected": 4,
+   "rule": 4,
+   "fix": 4
+  },
+  "past-irregular": {
+   "n": 5,
+   "detected": 5,
+   "rule": 5,
+   "fix": 5
+  },
+  "present-r": {
+   "n": 5,
+   "detected": 5,
+   "rule": 5,
+   "fix": 5
+  },
+  "v2-inversion": {
+   "n": 8,
+   "detected": 7,
+   "rule": 7,
+   "fix": 7
+  }
+ },
+ "misses": [
+  {
+   "text": "Hun må ikke ryger her.",
+   "rule": "modal-infinitive",
+   "found": []
+  },
+  {
+   "text": "Efter skolen jeg spiser.",
+   "rule": "v2-inversion",
+   "found": []
+  },
+  {
+   "text": "Jeg ved, at Peter kommer ikke.",
+   "rule": "negation-placement",
+   "found": []
+  }
+ ],
+ "false_alarms": [],
+ "mean_issues_per_error_sentence": 0.946,
+ "created": "2026-10-19T01:54:55+00:00"
+}

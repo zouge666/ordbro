@@ -1,0 +1,16 @@
+{"id": "dev-01", "type": "rule-en", "question": "How do I say goodbye?", "gold": ["a1-hilsner#hilsner"]}
+{"id": "dev-02", "type": "form", "question": "What does halv fem mean?", "gold": ["a1-klokken#pas-på", "a1-klokken#regel"]}
+{"id": "dev-03", "type": "rule-en", "question": "When do I use mig instead of jeg?", "gold": ["a1-pronominer#regel"]}
+{"id": "dev-04", "type": "rule-da", "question": "Hvad betyder bør?", "gold": ["a1-modalverber#betydning"]}
+{"id": "dev-05", "type": "form", "question": "What is the plural of øje?", "gold": ["a1-flertal#uregelmæssige-flertal"]}
+{"id": "dev-06", "type": "example", "question": "Can I pay with a card at the bakery?", "gold": ["hos-bageren#dialog"]}
+{"id": "dev-07", "type": "rule-da", "question": "Hvordan lyder å?", "gold": ["a1-udtale#vokalerne-æ-ø-å-og-y"]}
+{"id": "dev-08", "type": "form", "question": "What is the superlative of stor?", "gold": ["a2-gradboejning#uregelmæssige"]}
+{"id": "dev-09", "type": "unanswerable", "question": "How do I open a bank account in Denmark?", "gold": []}
+{"id": "dev-10", "type": "unanswerable", "question": "What is the dative case in German?", "gold": []}
+{"id": "dev-11", "type": "unanswerable", "question": "Translate my email into Danish.", "gold": []}
+{"id": "dev-12", "type": "unanswerable", "question": "What is the weather like in Copenhagen?", "gold": []}
+{"id": "dev-13", "type": "unanswerable", "question": "What is the history of the Danish language?", "gold": []}
+{"id": "dev-14", "type": "unanswerable", "question": "How do I write the letter ð?", "gold": []}
+{"id": "dev-15", "type": "unanswerable", "question": "Which Danish dialects are there?", "gold": []}
+{"id": "dev-16", "type": "unanswerable", "question": "How do I get a driving license?", "gold": []}

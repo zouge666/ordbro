@@ -12,8 +12,8 @@ web_dir = "web"
 preset = "ordbro"
 top_k = 5
 rrf_k = 60
-# answers with a lower confidence are not shown as an answer
-abstain_below = 0.12
+# tuned on eval/retrieval_dev.jsonl; answers below it are not shown as an answer
+abstain_below = 0.095
 
 [llm]
 # "none" keeps everything offline. "openai-compatible" is optional.

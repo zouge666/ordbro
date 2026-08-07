@@ -133,8 +133,10 @@ class Ordbro:
             "corrected": apply_suggestions(text, issues),
         }
 
-    def assess_speech(self, target: str, transcript: str) -> dict[str, Any]:
-        result = assess(target, transcript).to_dict()
+    def assess_speech(
+        self, target: str, transcript: str, alternatives: list[str] | None = None
+    ) -> dict[str, Any]:
+        result = assess(target, transcript, alternatives or ()).to_dict()
         for tip in result["tips"]:
             section = self.section(tip["section"])
             tip["note"] = section["text"] if section else ""
@@ -173,6 +175,15 @@ class Ordbro:
             "history": state.history[-20:],
             "plan": self.policy.daily_plan(state, now),
         }
+
+    def lab_results(self) -> dict[str, Any]:
+        folder = self.settings.root / "eval" / "results"
+        results: dict[str, Any] = {}
+        for name in ("retrieval", "grammar", "speech", "tutor"):
+            path = folder / f"{name}.json"
+            if path.exists():
+                results[name] = json.loads(path.read_text(encoding="utf-8"))
+        return results
 
     def overview(self) -> dict[str, Any]:
         return {

@@ -1,0 +1,946 @@
+{
+ "test_questions": 73,
+ "dev_questions": 16,
+ "types": {
+  "rule-en": 15,
+  "rule-da": 10,
+  "form": 12,
+  "example": 8,
+  "ascii": 8,
+  "paraphrase": 8,
+  "unanswerable": 12
+ },
+ "presets": [
+  {
+   "name": "c0",
+   "label": "LinguaPilot, sparse only",
+   "group": "ladder",
+   "chunks": 30,
+   "mean_chunk_chars": 600,
+   "recall@1": 0.3607,
+   "recall@3": 0.5574,
+   "recall@5": 0.6066,
+   "mrr": 0.4567,
+   "ndcg@5": 0.4862,
+   "note@1": 0.377,
+   "precision@1": 0.1274,
+   "n": 61
+  },
+  {
+   "name": "c1",
+   "label": "LinguaPilot, hash fallback",
+   "group": "ladder",
+   "chunks": 30,
+   "mean_chunk_chars": 600,
+   "recall@1": 0.2131,
+   "recall@3": 0.4262,
+   "recall@5": 0.5738,
+   "mrr": 0.3613,
+   "ndcg@5": 0.3745,
+   "note@1": 0.2131,
+   "precision@1": 0.0731,
+   "n": 61
+  },
+  {
+   "name": "c1n",
+   "label": "LinguaPilot, nomic-embed-text",
+   "group": "ladder",
+   "chunks": 30,
+   "mean_chunk_chars": 600,
+   "recall@1": 0.4754,
+   "recall@3": 0.6721,
+   "recall@5": 0.7541,
+   "mrr": 0.5943,
+   "ndcg@5": 0.6148,
+   "note@1": 0.4918,
+   "precision@1": 0.1875,
+   "n": 61
+  },
+  {
+   "name": "c2",
+   "label": "+ Danish analyzer",
+   "group": "ladder",
+   "chunks": 30,
+   "mean_chunk_chars": 600,
+   "recall@1": 0.541,
+   "recall@3": 0.7049,
+   "recall@5": 0.7705,
+   "mrr": 0.6268,
+   "ndcg@5": 0.6475,
+   "note@1": 0.5574,
+   "precision@1": 0.1903,
+   "n": 61
+  },
+  {
+   "name": "c3",
+   "label": "+ section chunks",
+   "group": "ladder",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.3443,
+   "recall@3": 0.5738,
+   "recall@5": 0.6721,
+   "mrr": 0.4788,
+   "ndcg@5": 0.5003,
+   "note@1": 0.5246,
+   "precision@1": 0.3443,
+   "n": 61
+  },
+  {
+   "name": "c4",
+   "label": "+ metadata prefix",
+   "group": "ladder",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.4426,
+   "recall@3": 0.7541,
+   "recall@5": 0.8852,
+   "mrr": 0.6123,
+   "ndcg@5": 0.6634,
+   "note@1": 0.7541,
+   "precision@1": 0.4426,
+   "n": 61
+  },
+  {
+   "name": "c5",
+   "label": "+ subword vectors",
+   "group": "ladder",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.459,
+   "recall@3": 0.7869,
+   "recall@5": 0.8852,
+   "mrr": 0.6223,
+   "ndcg@5": 0.6749,
+   "note@1": 0.7869,
+   "precision@1": 0.459,
+   "n": 61
+  },
+  {
+   "name": "c6",
+   "label": "+ glossary expansion",
+   "group": "ladder",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.541,
+   "recall@3": 0.8525,
+   "recall@5": 0.918,
+   "mrr": 0.6884,
+   "ndcg@5": 0.7279,
+   "note@1": 0.8525,
+   "precision@1": 0.541,
+   "n": 61
+  },
+  {
+   "name": "c6-no-stem",
+   "label": "Ordbro without stemming",
+   "group": "ablation",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.5738,
+   "recall@3": 0.8033,
+   "recall@5": 0.9016,
+   "mrr": 0.704,
+   "ndcg@5": 0.7377,
+   "note@1": 0.8689,
+   "precision@1": 0.5738,
+   "n": 61
+  },
+  {
+   "name": "c6-no-compounds",
+   "label": "Ordbro without compound split",
+   "group": "ablation",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.5246,
+   "recall@3": 0.8852,
+   "recall@5": 0.918,
+   "mrr": 0.6885,
+   "ndcg@5": 0.7239,
+   "note@1": 0.8525,
+   "precision@1": 0.5246,
+   "n": 61
+  },
+  {
+   "name": "c6-no-prefix",
+   "label": "Ordbro without metadata prefix",
+   "group": "ablation",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.4426,
+   "recall@3": 0.7377,
+   "recall@5": 0.8361,
+   "mrr": 0.6091,
+   "ndcg@5": 0.6134,
+   "note@1": 0.6885,
+   "precision@1": 0.4426,
+   "n": 61
+  },
+  {
+   "name": "c6-bm25-only",
+   "label": "Ordbro without vector route",
+   "group": "ablation",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.541,
+   "recall@3": 0.8361,
+   "recall@5": 0.918,
+   "mrr": 0.6929,
+   "ndcg@5": 0.7348,
+   "note@1": 0.8361,
+   "precision@1": 0.541,
+   "n": 61
+  },
+  {
+   "name": "c6-ollama",
+   "label": "Ordbro + nomic-embed-text",
+   "group": "ablation",
+   "chunks": 97,
+   "mean_chunk_chars": 176,
+   "recall@1": 0.5574,
+   "recall@3": 0.8197,
+   "recall@5": 0.8852,
+   "mrr": 0.7003,
+   "ndcg@5": 0.7219,
+   "note@1": 0.8525,
+   "precision@1": 0.5574,
+   "n": 61
+  }
+ ],
+ "skipped": [],
+ "by_type": {
+  "c0": {
+   "ascii": {
+    "recall@1": 0.625,
+    "recall@3": 0.75,
+    "recall@5": 0.75,
+    "mrr": 0.7014,
+    "ndcg@5": 0.7039,
+    "note@1": 0.625,
+    "precision@1": 0.1493,
+    "n": 8
+   },
+   "example": {
+    "recall@1": 0.375,
+    "recall@3": 0.75,
+    "recall@5": 0.75,
+    "mrr": 0.5208,
+    "ndcg@5": 0.5383,
+    "note@1": 0.5,
+    "precision@1": 0.2678,
+    "n": 8
+   },
+   "form": {
+    "recall@1": 0.4167,
+    "recall@3": 0.6667,
+    "recall@5": 0.9167,
+    "mrr": 0.5903,
+    "ndcg@5": 0.6573,
+    "note@1": 0.4167,
+    "precision@1": 0.1227,
+    "n": 12
+   },
+   "paraphrase": {
+    "recall@1": 0.0,
+    "recall@3": 0.125,
+    "recall@5": 0.125,
+    "mrr": 0.0625,
+    "ndcg@5": 0.0789,
+    "note@1": 0.0,
+    "precision@1": 0.0,
+    "n": 8
+   },
+   "rule-da": {
+    "recall@1": 0.8,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "mrr": 0.8667,
+    "ndcg@5": 0.8967,
+    "note@1": 0.8,
+    "precision@1": 0.2511,
+    "n": 10
+   },
+   "rule-en": {
+    "recall@1": 0.0667,
+    "recall@3": 0.2,
+    "recall@5": 0.2,
+    "mrr": 0.1222,
+    "ndcg@5": 0.1489,
+    "note@1": 0.0667,
+    "precision@1": 0.0299,
+    "n": 15
+   }
+  },
+  "c1n": {
+   "ascii": {
+    "recall@1": 0.5,
+    "recall@3": 0.875,
+    "recall@5": 0.875,
+    "mrr": 0.6458,
+    "ndcg@5": 0.7039,
+    "note@1": 0.5,
+    "precision@1": 0.1232,
+    "n": 8
+   },
+   "example": {
+    "recall@1": 0.625,
+    "recall@3": 0.75,
+    "recall@5": 0.75,
+    "mrr": 0.7083,
+    "ndcg@5": 0.658,
+    "note@1": 0.75,
+    "precision@1": 0.3879,
+    "n": 8
+   },
+   "form": {
+    "recall@1": 0.5,
+    "recall@3": 0.8333,
+    "recall@5": 0.9167,
+    "mrr": 0.6597,
+    "ndcg@5": 0.7194,
+    "note@1": 0.5,
+    "precision@1": 0.149,
+    "n": 12
+   },
+   "paraphrase": {
+    "recall@1": 0.25,
+    "recall@3": 0.25,
+    "recall@5": 0.25,
+    "mrr": 0.296,
+    "ndcg@5": 0.25,
+    "note@1": 0.25,
+    "precision@1": 0.0937,
+    "n": 8
+   },
+   "rule-da": {
+    "recall@1": 0.9,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "mrr": 0.95,
+    "ndcg@5": 0.9598,
+    "note@1": 0.9,
+    "precision@1": 0.342,
+    "n": 10
+   },
+   "rule-en": {
+    "recall@1": 0.2,
+    "recall@3": 0.4,
+    "recall@5": 0.6667,
+    "mrr": 0.3758,
+    "ndcg@5": 0.4252,
+    "note@1": 0.2,
+    "precision@1": 0.0927,
+    "n": 15
+   }
+  },
+  "c6": {
+   "ascii": {
+    "recall@1": 0.5,
+    "recall@3": 0.625,
+    "recall@5": 0.875,
+    "mrr": 0.5979,
+    "ndcg@5": 0.6647,
+    "note@1": 0.875,
+    "precision@1": 0.5,
+    "n": 8
+   },
+   "example": {
+    "recall@1": 0.625,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "mrr": 0.7708,
+    "ndcg@5": 0.8455,
+    "note@1": 0.875,
+    "precision@1": 0.625,
+    "n": 8
+   },
+   "form": {
+    "recall@1": 0.75,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "mrr": 0.8611,
+    "ndcg@5": 0.8866,
+    "note@1": 1.0,
+    "precision@1": 0.75,
+    "n": 12
+   },
+   "paraphrase": {
+    "recall@1": 0.375,
+    "recall@3": 0.5,
+    "recall@5": 0.625,
+    "mrr": 0.4625,
+    "ndcg@5": 0.4835,
+    "note@1": 0.5,
+    "precision@1": 0.375,
+    "n": 8
+   },
+   "rule-da": {
+    "recall@1": 0.5,
+    "recall@3": 0.9,
+    "recall@5": 1.0,
+    "mrr": 0.67,
+    "ndcg@5": 0.7395,
+    "note@1": 0.8,
+    "precision@1": 0.5,
+    "n": 10
+   },
+   "rule-en": {
+    "recall@1": 0.4667,
+    "recall@3": 0.9333,
+    "recall@5": 0.9333,
+    "mrr": 0.6873,
+    "ndcg@5": 0.6947,
+    "note@1": 0.9333,
+    "precision@1": 0.4667,
+    "n": 15
+   }
+  }
+ },
+ "failures": {
+  "c0": [
+   {
+    "question": "When does the verb come before the subject?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a1-ordstilling#regel",
+     "a1-ordstilling#pas-på"
+    ],
+    "got": [
+     "med-bussen#dialog",
+     "med-bussen#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Where do I put ikke in a sentence with fordi?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a2-naegtelse#ledsætning",
+     "a2-saetninger#ordstilling-i-ledsætningen"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I know if a noun is en or et?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a1-en-og-et#regel",
+     "a1-en-og-et#tip"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I say 'the car' in Danish?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a1-bestemt-form#regel"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "What ending does an adjective get with an et-word?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a2-adjektiver#regel"
+    ],
+    "got": [
+     "med-bussen#dialog",
+     "med-bussen#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Which verbs use er in the perfect tense?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a2-foernutid#med-er"
+    ],
+    "got": [
+     "a1-ordstilling#regel",
+     "a1-ordstilling#eksempler",
+     "a1-ordstilling#ledsætning-først",
+     "a1-ordstilling#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I compare two things?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a2-gradboejning#regel"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "When do I use i and when do I use på?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a2-praepositioner#sted-i-eller-på"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Do I need at after kan?",
+    "type": "rule-en",
+    "rank": 3,
+    "gold": [
+     "a1-modalverber#regel",
+     "a1-modalverber#pas-på"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I ask a yes or no question?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a1-spoergsmaal#ja-nej-spørgsmål"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Is the present tense different for each person?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a1-nutid#regel"
+    ],
+    "got": [
+     "a1-hilsner#hilsner",
+     "a1-hilsner#at-præsentere-sig",
+     "a1-hilsner#hvordan-har-du-det",
+     "a1-hilsner#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Are days of the week written with a capital letter?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a1-dage-og-tid#pas-på"
+    ],
+    "got": [
+     "a2-praepositioner#sted-i-eller-på",
+     "a2-praepositioner#tid",
+     "a2-praepositioner#eksempler",
+     "a2-praepositioner#pas-på"
+    ],
+    "right_note": false
+   }
+  ],
+  "c1n": [
+   {
+    "question": "When does the verb come before the subject?",
+    "type": "rule-en",
+    "rank": 9,
+    "gold": [
+     "a1-ordstilling#regel",
+     "a1-ordstilling#pas-på"
+    ],
+    "got": [
+     "a2-saetninger#ordstilling-i-ledsætningen",
+     "a2-saetninger#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I know if a noun is en or et?",
+    "type": "rule-en",
+    "rank": 4,
+    "gold": [
+     "a1-en-og-et#regel",
+     "a1-en-og-et#tip"
+    ],
+    "got": [
+     "a1-nutid#regel",
+     "a1-nutid#eksempler",
+     "a1-nutid#uregelmæssige-verber-i-nutid",
+     "a1-nutid#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I say 'the car' in Danish?",
+    "type": "rule-en",
+    "rank": 10,
+    "gold": [
+     "a1-bestemt-form#regel"
+    ],
+    "got": [
+     "a2-saetninger#ordstilling-i-ledsætningen",
+     "a2-saetninger#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "What ending does an adjective get with an et-word?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a2-adjektiver#regel"
+    ],
+    "got": [
+     "a2-gradboejning#regel",
+     "a2-gradboejning#uregelmæssige",
+     "a2-gradboejning#lange-ord",
+     "a2-gradboejning#eksempler",
+     "a2-gradboejning#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Which verbs use er in the perfect tense?",
+    "type": "rule-en",
+    "rank": 4,
+    "gold": [
+     "a2-foernutid#med-er"
+    ],
+    "got": [
+     "a1-modalverber#regel",
+     "a1-modalverber#betydning",
+     "a1-modalverber#eksempler",
+     "a1-modalverber#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I compare two things?",
+    "type": "rule-en",
+    "rank": null,
+    "gold": [
+     "a2-gradboejning#regel"
+    ],
+    "got": [
+     "i-supermarkedet#dialog",
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "When do I use i and when do I use på?",
+    "type": "rule-en",
+    "rank": 7,
+    "gold": [
+     "a2-praepositioner#sted-i-eller-på"
+    ],
+    "got": [
+     "a1-modalverber#regel",
+     "a1-modalverber#betydning",
+     "a1-modalverber#eksempler",
+     "a1-modalverber#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "How do I ask a yes or no question?",
+    "type": "rule-en",
+    "rank": 3,
+    "gold": [
+     "a1-spoergsmaal#ja-nej-spørgsmål"
+    ],
+    "got": [
+     "ny-kollega#dialog",
+     "ny-kollega#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Is the present tense different for each person?",
+    "type": "rule-en",
+    "rank": 5,
+    "gold": [
+     "a1-nutid#regel"
+    ],
+    "got": [
+     "a1-hilsner#hilsner",
+     "a1-hilsner#at-præsentere-sig",
+     "a1-hilsner#hvordan-har-du-det",
+     "a1-hilsner#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Are days of the week written with a capital letter?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a1-dage-og-tid#pas-på"
+    ],
+    "got": [
+     "a2-praepositioner#sted-i-eller-på",
+     "a2-praepositioner#tid",
+     "a2-praepositioner#eksempler",
+     "a2-praepositioner#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "When should I use the past tense and when the perfect tense?",
+    "type": "rule-en",
+    "rank": 4,
+    "gold": [
+     "a2-foernutid#pas-på",
+     "a2-datid#regel"
+    ],
+    "got": [
+     "a1-modalverber#regel",
+     "a1-modalverber#betydning",
+     "a1-modalverber#eksempler",
+     "a1-modalverber#pas-på"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "When do I put ikke before the verb?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a2-naegtelse#ledsætning",
+     "a2-saetninger#ordstilling-i-ledsætningen"
+    ],
+    "got": [
+     "a1-bestemt-form#regel",
+     "a1-bestemt-form#flertal-i-bestemt-form",
+     "a1-bestemt-form#eksempler",
+     "a1-bestemt-form#pas-på"
+    ],
+    "right_note": false
+   }
+  ],
+  "c6": [
+   {
+    "question": "How do I say 'the car' in Danish?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a1-bestemt-form#regel"
+    ],
+    "got": [
+     "a1-bestemt-form#eksempler"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "What ending does an adjective get with an et-word?",
+    "type": "rule-en",
+    "rank": 3,
+    "gold": [
+     "a2-adjektiver#regel"
+    ],
+    "got": [
+     "a2-adjektiver#efter-verbet-er"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "When do I use sin instead of hans?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a2-ejestedord#sin-sit-og-sine"
+    ],
+    "got": [
+     "a2-ejestedord#pas-på"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "Which verbs use er in the perfect tense?",
+    "type": "rule-en",
+    "rank": 3,
+    "gold": [
+     "a2-foernutid#med-er"
+    ],
+    "got": [
+     "a2-foernutid#regel"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "When do I use i and when do I use på?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a2-praepositioner#sted-i-eller-på"
+    ],
+    "got": [
+     "a2-praepositioner#pas-på"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "Do I need at after kan?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a1-modalverber#regel",
+     "a1-modalverber#pas-på"
+    ],
+    "got": [
+     "i-supermarkedet#nyttige-udtryk"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "When should I use the past tense and when the perfect tense?",
+    "type": "rule-en",
+    "rank": 2,
+    "gold": [
+     "a2-foernutid#pas-på",
+     "a2-datid#regel"
+    ],
+    "got": [
+     "a2-foernutid#regel"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "When do I put ikke before the verb?",
+    "type": "rule-en",
+    "rank": 7,
+    "gold": [
+     "a2-naegtelse#ledsætning",
+     "a2-saetninger#ordstilling-i-ledsætningen"
+    ],
+    "got": [
+     "a2-naegtelse#med-modalverbum-eller-har-og-er"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "Hvordan laver man flertal?",
+    "type": "rule-da",
+    "rank": 3,
+    "gold": [
+     "a1-flertal#regel"
+    ],
+    "got": [
+     "a1-hilsner#hvordan-har-du-det"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Hvordan bøjer man adjektiver efter den og det?",
+    "type": "rule-da",
+    "rank": 3,
+    "gold": [
+     "a2-adjektiver#bestemt-form"
+    ],
+    "got": [
+     "a2-adjektiver#efter-verbet-er"
+    ],
+    "right_note": true
+   },
+   {
+    "question": "Hvordan siger man klokken?",
+    "type": "rule-da",
+    "rank": 2,
+    "gold": [
+     "a1-klokken#regel"
+    ],
+    "got": [
+     "a1-hilsner#hvordan-har-du-det"
+    ],
+    "right_note": false
+   },
+   {
+    "question": "Hvilke verber bruger er i førnutid?",
+    "type": "rule-da",
+    "rank": 3,
+    "gold": [
+     "a2-foernutid#med-er"
+    ],
+    "got": [
+     "a2-foernutid#pas-på"
+    ],
+    "right_note": true
+   }
+  ]
+ },
+ "abstention": {
+  "text": {
+   "threshold": 0.13,
+   "dev_accuracy": 0.875,
+   "unanswerable_abstained": 0.6667,
+   "answerable_answered": 0.7869,
+   "answered_and_right_at_1": 0.4426,
+   "false_answers": [
+    "How do I conjugate verbs in Finnish?",
+    "Explain the future perfect tense with examples.",
+    "How many cases do Danish nouns have?",
+    "How do I use the word hygge in a sentence?"
+   ],
+   "false_abstentions": [
+    "How do I say 'the car' in Danish?",
+    "When do I use i and when do I use på?",
+    "What is the past tense of gå?",
+    "How do you say 50 in Danish?",
+    "comparative of god",
+    "How do I say 99 in Danish?",
+    "Examples of et-words",
+    "How do I ask if a bus goes to the central station?",
+    "blodt d udtale",
+    "Which little word makes a sentence negative?",
+    "How do I say that something belongs to me?",
+    "How do I say more expensive?",
+    "What do I say when I meet someone new?"
+   ]
+  },
+  "index_text": {
+   "threshold": 0.095,
+   "dev_accuracy": 1.0,
+   "unanswerable_abstained": 0.5833,
+   "answerable_answered": 0.9672,
+   "answered_and_right_at_1": 0.541,
+   "false_answers": [
+    "How do I conjugate verbs in Finnish?",
+    "Explain the future perfect tense with examples.",
+    "How many cases do Danish nouns have?",
+    "How does the passive with -s work in Danish?",
+    "How do I use the word hygge in a sentence?"
+   ],
+   "false_abstentions": [
+    "How do I say that something belongs to me?",
+    "How do I say more expensive?"
+   ]
+  }
+ },
+ "created": "2026-10-19T01:54:55+00:00"
+}

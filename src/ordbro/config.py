@@ -35,7 +35,7 @@ class RagSettings:
     preset: str = "ordbro"
     top_k: int = 5
     rrf_k: int = 60
-    abstain_below: float = 0.12
+    abstain_below: float = 0.095
 
 
 @dataclass

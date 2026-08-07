@@ -53,7 +53,7 @@ class Answerer:
     def __init__(
         self,
         kb: KnowledgeBase,
-        abstain_below: float = 0.12,
+        abstain_below: float = 0.095,
         max_lines: int = 3,
         composer: Composer | None = None,
     ) -> None:

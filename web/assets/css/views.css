@@ -157,3 +157,29 @@ details.trace[open] summary { margin-bottom: 0.7rem; }
 .history-row .mark.no { background: var(--clay); }
 
 :root[data-english="hide"] [data-english] { display: none; }
+
+/* Lab ---------------------------------------------------------------------- */
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.8rem; }
+.kpi { border: 1px solid var(--line); border-radius: 12px; padding: 0.9rem 1rem; background: var(--surface-2); }
+.kpi .value { font-size: 1.6rem; font-weight: 650; letter-spacing: -0.02em; }
+.kpi .label { font-size: 0.82rem; color: var(--ink-2); }
+.chart { width: 100%; height: auto; display: block; }
+.chart text { fill: var(--ink-2); font-size: 11px; font-family: var(--font); }
+.chart .bar { fill: var(--fjord); }
+.chart .bar.alt { fill: var(--line-strong); }
+.chart .bar.best { fill: var(--moss); }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .line { fill: none; stroke-width: 2.2; }
+.chart .line.one { stroke: var(--clay); }
+.chart .line.three { stroke: var(--fjord); }
+.legend { display: flex; gap: 1rem; font-size: 0.82rem; color: var(--ink-2); flex-wrap: wrap; }
+.legend span::before { content: ""; display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 3px; margin-right: 0.35rem; vertical-align: -1px; background: var(--swatch); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+.data-table th, .data-table td { padding: 0.45rem 0.55rem; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+.data-table th:first-child, .data-table td:first-child { text-align: left; white-space: normal; }
+.data-table th { color: var(--ink-3); font-weight: 560; }
+.data-table tr.hl td { background: var(--fjord-soft); }
+.table-wrap { overflow-x: auto; }
+.fail-list { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.9rem; }
+.fail-list li { color: var(--ink-2); }

@@ -1,0 +1,96 @@
+{"id": "g-001", "text": "Jeg har en Kat.", "errors": [{"rule": "capital-noun", "wrong": "Kat", "fix": "kat"}]}
+{"id": "g-002", "text": "Vi spiser Brød til morgenmad.", "errors": [{"rule": "capital-noun", "wrong": "Brød", "fix": "brød"}]}
+{"id": "g-003", "text": "Min Søster bor i Odense.", "errors": [{"rule": "capital-noun", "wrong": "Søster", "fix": "søster"}]}
+{"id": "g-004", "text": "Hun køber en ny Jakke.", "errors": [{"rule": "capital-noun", "wrong": "Jakke", "fix": "jakke"}]}
+{"id": "g-005", "text": "Han læser en Bog.", "errors": [{"rule": "capital-noun", "wrong": "Bog", "fix": "bog"}]}
+{"id": "g-006", "text": "Vi ses på Fredag.", "errors": [{"rule": "capital-word", "wrong": "Fredag", "fix": "fredag"}]}
+{"id": "g-007", "text": "Jeg er født i Marts.", "errors": [{"rule": "capital-word", "wrong": "Marts", "fix": "marts"}]}
+{"id": "g-008", "text": "I dag går Jeg i skole.", "errors": [{"rule": "capital-word", "wrong": "Jeg", "fix": "jeg"}]}
+{"id": "g-009", "text": "Hun kommer på Søndag.", "errors": [{"rule": "capital-word", "wrong": "Søndag", "fix": "søndag"}]}
+{"id": "g-010", "text": "Hun har et bil.", "errors": [{"rule": "article-gender", "wrong": "et", "fix": "en"}]}
+{"id": "g-011", "text": "Vi spiser en æble.", "errors": [{"rule": "article-gender", "wrong": "en", "fix": "et"}]}
+{"id": "g-012", "text": "Der er et stol i køkkenet.", "errors": [{"rule": "article-gender", "wrong": "et", "fix": "en"}]}
+{"id": "g-013", "text": "Han har en barn.", "errors": [{"rule": "article-gender", "wrong": "en", "fix": "et"}]}
+{"id": "g-014", "text": "Jeg køber et billet.", "errors": [{"rule": "article-gender", "wrong": "et", "fix": "en"}]}
+{"id": "g-015", "text": "Det er et stor hus.", "errors": [{"rule": "adjective-agreement", "wrong": "stor", "fix": "stort"}]}
+{"id": "g-016", "text": "Hun har en stort bil.", "errors": [{"rule": "adjective-agreement", "wrong": "stort", "fix": "stor"}]}
+{"id": "g-017", "text": "De har to lille børn.", "errors": [{"rule": "adjective-agreement", "wrong": "lille", "fix": "små"}]}
+{"id": "g-018", "text": "Vi bor i et gammel hus.", "errors": [{"rule": "adjective-agreement", "wrong": "gammel", "fix": "gammelt"}]}
+{"id": "g-019", "text": "Jeg kan godt lide den rød bil.", "errors": [{"rule": "adjective-agreement", "wrong": "rød", "fix": "røde"}]}
+{"id": "g-020", "text": "Han har mange ny venner.", "errors": [{"rule": "adjective-agreement", "wrong": "ny", "fix": "nye"}]}
+{"id": "g-021", "text": "Den bilen er min.", "errors": [{"rule": "double-definite", "wrong": "Den bilen", "fix": "Bilen"}]}
+{"id": "g-022", "text": "Det huset er stort.", "errors": [{"rule": "double-definite", "wrong": "Det huset", "fix": "Huset"}]}
+{"id": "g-023", "text": "Jeg kan godt lide den store bilen.", "errors": [{"rule": "double-definite", "wrong": "bilen", "fix": "bil"}]}
+{"id": "g-024", "text": "De børnene leger.", "errors": [{"rule": "double-definite", "wrong": "De børnene", "fix": "Børnene"}]}
+{"id": "g-025", "text": "Jeg kan taler dansk.", "errors": [{"rule": "modal-infinitive", "wrong": "taler", "fix": "tale"}]}
+{"id": "g-026", "text": "Du skal arbejder i morgen.", "errors": [{"rule": "modal-infinitive", "wrong": "arbejder", "fix": "arbejde"}]}
+{"id": "g-027", "text": "Vi vil spiser pizza.", "errors": [{"rule": "modal-infinitive", "wrong": "spiser", "fix": "spise"}]}
+{"id": "g-028", "text": "Hun må ikke ryger her.", "errors": [{"rule": "modal-infinitive", "wrong": "ryger", "fix": "ryge"}]}
+{"id": "g-029", "text": "Jeg kan ikke kommer i dag.", "errors": [{"rule": "modal-infinitive", "wrong": "kommer", "fix": "komme"}]}
+{"id": "g-030", "text": "Jeg glæder mig til at ser filmen.", "errors": [{"rule": "modal-infinitive", "wrong": "ser", "fix": "se"}]}
+{"id": "g-031", "text": "Jeg spise morgenmad.", "errors": [{"rule": "present-r", "wrong": "spise", "fix": "spiser"}]}
+{"id": "g-032", "text": "Han arbejde på et hospital.", "errors": [{"rule": "present-r", "wrong": "arbejde", "fix": "arbejder"}]}
+{"id": "g-033", "text": "Vi bo i Brøndby.", "errors": [{"rule": "present-r", "wrong": "bo", "fix": "bor"}]}
+{"id": "g-034", "text": "De tale dansk sammen.", "errors": [{"rule": "present-r", "wrong": "tale", "fix": "taler"}]}
+{"id": "g-035", "text": "Hun læse en bog.", "errors": [{"rule": "present-r", "wrong": "læse", "fix": "læser"}]}
+{"id": "g-036", "text": "I dag jeg går i skole.", "errors": [{"rule": "v2-inversion", "wrong": "jeg går", "fix": "går jeg"}]}
+{"id": "g-037", "text": "I morgen vi spiser fisk.", "errors": [{"rule": "v2-inversion", "wrong": "vi spiser", "fix": "spiser vi"}]}
+{"id": "g-038", "text": "Om aftenen hun læser.", "errors": [{"rule": "v2-inversion", "wrong": "hun læser", "fix": "læser hun"}]}
+{"id": "g-039", "text": "Når jeg kommer hjem, jeg laver mad.", "errors": [{"rule": "v2-inversion", "wrong": "jeg laver", "fix": "laver jeg"}]}
+{"id": "g-040", "text": "Derfor jeg lærer dansk.", "errors": [{"rule": "v2-inversion", "wrong": "jeg lærer", "fix": "lærer jeg"}]}
+{"id": "g-041", "text": "Nu han bor i Aarhus.", "errors": [{"rule": "v2-inversion", "wrong": "han bor", "fix": "bor han"}]}
+{"id": "g-042", "text": "Hvis det regner, vi bliver hjemme.", "errors": [{"rule": "v2-inversion", "wrong": "vi bliver", "fix": "bliver vi"}]}
+{"id": "g-043", "text": "Efter skolen jeg spiser.", "errors": [{"rule": "v2-inversion", "wrong": "jeg spiser", "fix": "spiser jeg"}]}
+{"id": "g-044", "text": "Jeg bliver hjemme, fordi jeg har ikke tid.", "errors": [{"rule": "negation-placement", "wrong": "har ikke", "fix": "ikke har"}]}
+{"id": "g-045", "text": "Hun siger, at hun kan ikke komme.", "errors": [{"rule": "negation-placement", "wrong": "kan ikke", "fix": "ikke kan"}]}
+{"id": "g-046", "text": "Hvis du forstår ikke, så spørg.", "errors": [{"rule": "negation-placement", "wrong": "forstår ikke", "fix": "ikke forstår"}]}
+{"id": "g-047", "text": "Han er glad, fordi han er ikke syg.", "errors": [{"rule": "negation-placement", "wrong": "er ikke", "fix": "ikke er"}]}
+{"id": "g-048", "text": "Jeg ved, at Peter kommer ikke.", "errors": [{"rule": "negation-placement", "wrong": "kommer ikke", "fix": "ikke kommer"}]}
+{"id": "g-049", "text": "I går gåede jeg til arbejde.", "errors": [{"rule": "past-irregular", "wrong": "gåede", "fix": "gik"}]}
+{"id": "g-050", "text": "Hun spisede pizza.", "errors": [{"rule": "past-irregular", "wrong": "spisede", "fix": "spiste"}]}
+{"id": "g-051", "text": "Vi drikkede kaffe.", "errors": [{"rule": "past-irregular", "wrong": "drikkede", "fix": "drak"}]}
+{"id": "g-052", "text": "Han sovede længe.", "errors": [{"rule": "past-irregular", "wrong": "sovede", "fix": "sov"}]}
+{"id": "g-053", "text": "I går sede jeg en film.", "errors": [{"rule": "past-irregular", "wrong": "sede", "fix": "så"}]}
+{"id": "g-054", "text": "Jeg har en hund and en kat.", "errors": [{"rule": "english-word", "wrong": "and", "fix": "og"}]}
+{"id": "g-055", "text": "Hun er very glad.", "errors": [{"rule": "english-word", "wrong": "very", "fix": "meget"}]}
+{"id": "g-056", "text": "Jeg drikker kaffe with mælk.", "errors": [{"rule": "english-word", "wrong": "with", "fix": "med"}]}
+{"id": "g-057", "text": "Jeg har en kat.", "errors": []}
+{"id": "g-058", "text": "Vi spiser brød til morgenmad.", "errors": []}
+{"id": "g-059", "text": "Min søster bor i Odense.", "errors": []}
+{"id": "g-060", "text": "Vi ses på fredag.", "errors": []}
+{"id": "g-061", "text": "Jeg er født i marts.", "errors": []}
+{"id": "g-062", "text": "Hun har en bil.", "errors": []}
+{"id": "g-063", "text": "Vi spiser et æble.", "errors": []}
+{"id": "g-064", "text": "Det er et stort hus.", "errors": []}
+{"id": "g-065", "text": "Hun har en stor bil.", "errors": []}
+{"id": "g-066", "text": "De har to små børn.", "errors": []}
+{"id": "g-067", "text": "Vi bor i et gammelt hus.", "errors": []}
+{"id": "g-068", "text": "Jeg kan godt lide den røde bil.", "errors": []}
+{"id": "g-069", "text": "Bilen er min.", "errors": []}
+{"id": "g-070", "text": "Huset er stort.", "errors": []}
+{"id": "g-071", "text": "Jeg kan tale dansk.", "errors": []}
+{"id": "g-072", "text": "Du skal arbejde i morgen.", "errors": []}
+{"id": "g-073", "text": "Jeg spiser morgenmad.", "errors": []}
+{"id": "g-074", "text": "Han arbejder på et hospital.", "errors": []}
+{"id": "g-075", "text": "I dag går jeg i skole.", "errors": []}
+{"id": "g-076", "text": "Når jeg kommer hjem, laver jeg mad.", "errors": []}
+{"id": "g-077", "text": "Derfor lærer jeg dansk.", "errors": []}
+{"id": "g-078", "text": "Jeg bliver hjemme, fordi jeg ikke har tid.", "errors": []}
+{"id": "g-079", "text": "Hun siger, at hun ikke kan komme.", "errors": []}
+{"id": "g-080", "text": "I går gik jeg til arbejde.", "errors": []}
+{"id": "g-081", "text": "Hun spiste pizza.", "errors": []}
+{"id": "g-082", "text": "Jeg har en hund og en kat.", "errors": []}
+{"id": "g-083", "text": "Kan du hjælpe mig?", "errors": []}
+{"id": "g-084", "text": "Hvor bor I?", "errors": []}
+{"id": "g-085", "text": "Peter kysser sin kone.", "errors": []}
+{"id": "g-086", "text": "Jeg vil gerne have en kop kaffe.", "errors": []}
+{"id": "g-087", "text": "Det regner i dag.", "errors": []}
+{"id": "g-088", "text": "Han er lærer på en skole.", "errors": []}
+{"id": "g-089", "text": "Om morgenen drikker hun kaffe.", "errors": []}
+{"id": "g-090", "text": "Mit barn går i skole.", "errors": []}
+{"id": "g-091", "text": "Toget kører klokken otte.", "errors": []}
+{"id": "g-092", "text": "Det er en dejlig dag.", "errors": []}
+{"id": "g-093", "text": "Vi har mange gode venner.", "errors": []}
+{"id": "g-094", "text": "Jeg tror, at det regner i morgen.", "errors": []}
+{"id": "g-095", "text": "Jeg kan godt lide at læse bøger.", "errors": []}
+{"id": "g-096", "text": "Hvornår kommer bussen?", "errors": []}

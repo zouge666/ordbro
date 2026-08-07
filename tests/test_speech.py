@@ -56,3 +56,8 @@ def test_speaking_sentences_are_valid():
     items = json.loads((load_settings().data_path / "speaking.json").read_text(encoding="utf-8"))
     assert len(items) >= 20
     assert all(item["text"] and item["en"] and item["level"] in {"A1", "A2"} for item in items)
+
+
+def test_best_alternative_is_used():
+    result = assess("Hvad hedder du?", "vad heder du", ["hvad hedder du"])
+    assert result.score == 100 and result.used_alternative == 1

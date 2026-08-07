@@ -1,0 +1,73 @@
+{"id": "test-01", "type": "rule-en", "question": "When does the verb come before the subject?", "gold": ["a1-ordstilling#regel", "a1-ordstilling#pas-på"]}
+{"id": "test-02", "type": "rule-en", "question": "Where do I put ikke in a sentence with fordi?", "gold": ["a2-naegtelse#ledsætning", "a2-saetninger#ordstilling-i-ledsætningen"]}
+{"id": "test-03", "type": "rule-en", "question": "How do I know if a noun is en or et?", "gold": ["a1-en-og-et#regel", "a1-en-og-et#tip"]}
+{"id": "test-04", "type": "rule-en", "question": "How do I say 'the car' in Danish?", "gold": ["a1-bestemt-form#regel"]}
+{"id": "test-05", "type": "rule-en", "question": "What ending does an adjective get with an et-word?", "gold": ["a2-adjektiver#regel"]}
+{"id": "test-06", "type": "rule-en", "question": "When do I use sin instead of hans?", "gold": ["a2-ejestedord#sin-sit-og-sine"]}
+{"id": "test-07", "type": "rule-en", "question": "Which verbs use er in the perfect tense?", "gold": ["a2-foernutid#med-er"]}
+{"id": "test-08", "type": "rule-en", "question": "How do I compare two things?", "gold": ["a2-gradboejning#regel"]}
+{"id": "test-09", "type": "rule-en", "question": "When do I use i and when do I use på?", "gold": ["a2-praepositioner#sted-i-eller-på"]}
+{"id": "test-10", "type": "rule-en", "question": "Do I need at after kan?", "gold": ["a1-modalverber#regel", "a1-modalverber#pas-på"]}
+{"id": "test-11", "type": "rule-en", "question": "How do I ask a yes or no question?", "gold": ["a1-spoergsmaal#ja-nej-spørgsmål"]}
+{"id": "test-12", "type": "rule-en", "question": "Is the present tense different for each person?", "gold": ["a1-nutid#regel"]}
+{"id": "test-13", "type": "rule-en", "question": "Are days of the week written with a capital letter?", "gold": ["a1-dage-og-tid#pas-på"]}
+{"id": "test-14", "type": "rule-en", "question": "When should I use the past tense and when the perfect tense?", "gold": ["a2-foernutid#pas-på", "a2-datid#regel"]}
+{"id": "test-15", "type": "rule-en", "question": "When do I put ikke before the verb?", "gold": ["a2-naegtelse#ledsætning", "a2-saetninger#ordstilling-i-ledsætningen"]}
+{"id": "test-16", "type": "rule-da", "question": "Hvornår bytter subjekt og verbum plads?", "gold": ["a1-ordstilling#regel"]}
+{"id": "test-17", "type": "rule-da", "question": "Hvor står ikke i en ledsætning?", "gold": ["a2-naegtelse#ledsætning", "a2-saetninger#ordstilling-i-ledsætningen"]}
+{"id": "test-18", "type": "rule-da", "question": "Hvordan laver man flertal?", "gold": ["a1-flertal#regel"]}
+{"id": "test-19", "type": "rule-da", "question": "Hvornår bruger man sin, sit og sine?", "gold": ["a2-ejestedord#sin-sit-og-sine"]}
+{"id": "test-20", "type": "rule-da", "question": "Hvordan bøjer man adjektiver efter den og det?", "gold": ["a2-adjektiver#bestemt-form"]}
+{"id": "test-21", "type": "rule-da", "question": "Hvad er forskellen på for og fordi?", "gold": ["a2-saetninger#pas-på"]}
+{"id": "test-22", "type": "rule-da", "question": "Hvordan siger man klokken?", "gold": ["a1-klokken#regel"]}
+{"id": "test-23", "type": "rule-da", "question": "Hvilke verber bruger er i førnutid?", "gold": ["a2-foernutid#med-er"]}
+{"id": "test-24", "type": "rule-da", "question": "Hvad er modalverber?", "gold": ["a1-modalverber#regel", "a1-modalverber#betydning"]}
+{"id": "test-25", "type": "rule-da", "question": "Hvornår er g stumt?", "gold": ["a1-udtale#blødt-g"]}
+{"id": "test-26", "type": "form", "question": "What is the plural of barn?", "gold": ["a1-flertal#uregelmæssige-flertal"]}
+{"id": "test-27", "type": "form", "question": "What is the past tense of gå?", "gold": ["a2-datid#uregelmæssige-verber", "a2-datid#pas-på"]}
+{"id": "test-28", "type": "form", "question": "past tense of spise", "gold": ["a2-datid#regel", "a2-datid#pas-på"]}
+{"id": "test-29", "type": "form", "question": "How do you say 50 in Danish?", "gold": ["a1-tal#tierne"]}
+{"id": "test-30", "type": "form", "question": "What is the definite form of æble?", "gold": ["a1-bestemt-form#regel"]}
+{"id": "test-31", "type": "form", "question": "What is the participle of drikke?", "gold": ["a2-foernutid#former"]}
+{"id": "test-32", "type": "form", "question": "comparative of god", "gold": ["a2-gradboejning#uregelmæssige"]}
+{"id": "test-33", "type": "form", "question": "Hvad er flertal af mand?", "gold": ["a1-flertal#uregelmæssige-flertal"]}
+{"id": "test-34", "type": "form", "question": "What is the object form of jeg?", "gold": ["a1-pronominer#regel"]}
+{"id": "test-35", "type": "form", "question": "the present tense of være", "gold": ["a1-nutid#uregelmæssige-verber-i-nutid"]}
+{"id": "test-36", "type": "form", "question": "How do I say 99 in Danish?", "gold": ["a1-tal#regel"]}
+{"id": "test-37", "type": "form", "question": "datid af være", "gold": ["a2-datid#uregelmæssige-verber"]}
+{"id": "test-38", "type": "example", "question": "Give me an example of a sentence with inversion", "gold": ["a1-ordstilling#eksempler", "a1-ordstilling#ledsætning-først"]}
+{"id": "test-39", "type": "example", "question": "example sentence with fordi", "gold": ["a2-saetninger#fordi-at-når-hvis-og-selvom", "a2-naegtelse#ledsætning"]}
+{"id": "test-40", "type": "example", "question": "Examples of et-words", "gold": ["a1-en-og-et#eksempler"]}
+{"id": "test-41", "type": "example", "question": "How do I order bread at the bakery?", "gold": ["hos-bageren#dialog", "hos-bageren#nyttige-udtryk"]}
+{"id": "test-42", "type": "example", "question": "What can I say at the doctor when my head hurts?", "gold": ["hos-laegen#nyttige-udtryk", "hos-laegen#dialog"]}
+{"id": "test-43", "type": "example", "question": "How do I ask if a bus goes to the central station?", "gold": ["med-bussen#dialog", "med-bussen#nyttige-udtryk"]}
+{"id": "test-44", "type": "example", "question": "eksempler på datid", "gold": ["a2-datid#eksempler"]}
+{"id": "test-45", "type": "example", "question": "Example of a question with hvornår", "gold": ["a1-spoergsmaal#spørgsmål-med-hv-ord"]}
+{"id": "test-46", "type": "ascii", "question": "hvad er datid af gaa", "gold": ["a2-datid#uregelmæssige-verber"]}
+{"id": "test-47", "type": "ascii", "question": "hvordan siger man bloedt d", "gold": ["a1-udtale#blødt-d"]}
+{"id": "test-48", "type": "ascii", "question": "hvornaar er g stumt", "gold": ["a1-udtale#blødt-g"]}
+{"id": "test-49", "type": "ascii", "question": "flertal af haand", "gold": ["a1-flertal#uregelmæssige-flertal"]}
+{"id": "test-50", "type": "ascii", "question": "hvornaar bruger man paa", "gold": ["a2-praepositioner#sted-i-eller-på"]}
+{"id": "test-51", "type": "ascii", "question": "hvordan boejer man adjektiver", "gold": ["a2-adjektiver#regel"]}
+{"id": "test-52", "type": "ascii", "question": "uregelmaessige verber i datid", "gold": ["a2-datid#uregelmæssige-verber"]}
+{"id": "test-53", "type": "ascii", "question": "blodt d udtale", "gold": ["a1-udtale#blødt-d"]}
+{"id": "test-54", "type": "paraphrase", "question": "How do I talk about things that happened last week?", "gold": ["a2-datid#regel"]}
+{"id": "test-55", "type": "paraphrase", "question": "Which little word makes a sentence negative?", "gold": ["a2-naegtelse#hovedsætning"]}
+{"id": "test-56", "type": "paraphrase", "question": "How do I say that something belongs to me?", "gold": ["a2-ejestedord#regel"]}
+{"id": "test-57", "type": "paraphrase", "question": "Why does the word order change after today?", "gold": ["a1-ordstilling#regel", "a1-ordstilling#eksempler"]}
+{"id": "test-58", "type": "paraphrase", "question": "How do I say more expensive?", "gold": ["a2-gradboejning#regel"]}
+{"id": "test-59", "type": "paraphrase", "question": "What do I say when I meet someone new?", "gold": ["a1-hilsner#at-præsentere-sig", "a1-hilsner#hilsner"]}
+{"id": "test-60", "type": "paraphrase", "question": "How do I tell someone what time it is?", "gold": ["a1-klokken#regel", "a1-klokken#spørgsmål"]}
+{"id": "test-61", "type": "paraphrase", "question": "What sound does the letter d make after a vowel?", "gold": ["a1-udtale#blødt-d"]}
+{"id": "test-62", "type": "unanswerable", "question": "How do I conjugate verbs in Finnish?", "gold": []}
+{"id": "test-63", "type": "unanswerable", "question": "What is the subjunctive mood in Danish?", "gold": []}
+{"id": "test-64", "type": "unanswerable", "question": "How do I apply for Danish citizenship?", "gold": []}
+{"id": "test-65", "type": "unanswerable", "question": "What is the capital of Norway?", "gold": []}
+{"id": "test-66", "type": "unanswerable", "question": "How do I write a formal job application letter?", "gold": []}
+{"id": "test-67", "type": "unanswerable", "question": "Explain the future perfect tense with examples.", "gold": []}
+{"id": "test-68", "type": "unanswerable", "question": "What are the rules for commas in Danish?", "gold": []}
+{"id": "test-69", "type": "unanswerable", "question": "How many cases do Danish nouns have?", "gold": []}
+{"id": "test-70", "type": "unanswerable", "question": "Who was the first king of Denmark?", "gold": []}
+{"id": "test-71", "type": "unanswerable", "question": "How do I cook frikadeller?", "gold": []}
+{"id": "test-72", "type": "unanswerable", "question": "How does the passive with -s work in Danish?", "gold": []}
+{"id": "test-73", "type": "unanswerable", "question": "How do I use the word hygge in a sentence?", "gold": []}

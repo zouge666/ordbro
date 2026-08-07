@@ -105,7 +105,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @app.post("/api/speak/assess")
     def speak(request: AssessRequest) -> dict[str, Any]:
-        result = service.assess_speech(request.target, request.transcript)
+        alternatives = [alt[:500] for alt in request.alternatives]
+        result = service.assess_speech(request.target, request.transcript, alternatives)
         with service.learner(request.learner) as state:
             state.record(
                 {
@@ -118,6 +119,14 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 }
             )
         return result
+
+    @app.get("/api/lab")
+    def lab() -> dict[str, Any]:
+        return {
+            "results": service.lab_results(),
+            "feedback": service.feedback.summary(),
+            "knowledge_base": service.kb.stats(),
+        }
 
     @app.post("/api/feedback")
     def feedback(request: FeedbackRequest) -> dict[str, Any]:

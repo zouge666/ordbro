@@ -1,0 +1,80 @@
+{
+ "learners": 300,
+ "steps": 60,
+ "skills": 18,
+ "policies": {
+  "adaptive": {
+   "all": {
+    "skills_known": 9.3,
+    "skills_gained": 8.09,
+    "wasted_share": 0.304,
+    "reached_10_share": 0.51,
+    "steps_to_10": 45.5,
+    "estimate_agreement": 0.954
+   },
+   "fast": {
+    "skills_known": 12.05,
+    "skills_gained": 10.79,
+    "wasted_share": 0.387,
+    "reached_10_share": 0.9,
+    "steps_to_10": 45.3,
+    "estimate_agreement": 0.949
+   },
+   "slow": {
+    "skills_known": 6.56,
+    "skills_gained": 5.39,
+    "wasted_share": 0.222,
+    "reached_10_share": 0.12,
+    "steps_to_10": 46.9,
+    "estimate_agreement": 0.96
+   }
+  },
+  "fixed": {
+   "all": {
+    "skills_known": 8.09,
+    "skills_gained": 6.87,
+    "wasted_share": 0.288,
+    "reached_10_share": 0.38,
+    "steps_to_10": 47.2
+   },
+   "fast": {
+    "skills_known": 10.73,
+    "skills_gained": 9.47,
+    "wasted_share": 0.382,
+    "reached_10_share": 0.68,
+    "steps_to_10": 46.6
+   },
+   "slow": {
+    "skills_known": 5.45,
+    "skills_gained": 4.27,
+    "wasted_share": 0.193,
+    "reached_10_share": 0.08,
+    "steps_to_10": 52.1
+   }
+  },
+  "random": {
+   "all": {
+    "skills_known": 7.22,
+    "skills_gained": 6.0,
+    "wasted_share": 0.241,
+    "reached_10_share": 0.287,
+    "steps_to_10": 44.2
+   },
+   "fast": {
+    "skills_known": 9.47,
+    "skills_gained": 8.21,
+    "wasted_share": 0.315,
+    "reached_10_share": 0.52,
+    "steps_to_10": 43.7
+   },
+   "slow": {
+    "skills_known": 4.97,
+    "skills_gained": 3.79,
+    "wasted_share": 0.168,
+    "reached_10_share": 0.053,
+    "steps_to_10": 48.5
+   }
+  }
+ },
+ "created": "2026-10-19T01:55:07+00:00"
+}

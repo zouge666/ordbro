@@ -34,6 +34,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     kb = sub.add_parser("kb", help="show knowledge base statistics")
     kb.add_argument("--preset")
 
+    ev = sub.add_parser("eval", help="run the evaluation studies")
+    ev.add_argument(
+        "study",
+        nargs="?",
+        default="all",
+        choices=["all", "retrieval", "grammar", "speech", "tutor"],
+    )
+    ev.add_argument("--no-ollama", action="store_true", help="skip presets that need Ollama")
+
     args = parser.parse_args(argv)
     settings = load_settings(args.config)
 
@@ -71,6 +80,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             _print(answer.trace)
         return 0
 
+    if args.command == "eval":
+        from ordbro.evaluation.runner import STUDIES, run_all
+
+        studies = STUDIES if args.study == "all" else (args.study,)
+        results = run_all(settings, studies, use_ollama=not args.no_ollama)
+        _print_summary(results)
+        return 0
+
     if args.command == "check":
         from ordbro.service import Ordbro
 
@@ -81,6 +98,35 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(result["corrected"])
         return 0
     return 1
+
+
+def _print_summary(results: dict) -> None:
+    if "retrieval" in results:
+        print("retrieval (test set)")
+        for row in results["retrieval"]["presets"]:
+            print(
+                f"  {row['name']:16} R@1 {row['recall@1']:.3f}  R@3 {row['recall@3']:.3f}  "
+                f"MRR {row['mrr']:.3f}  note@1 {row['note@1']:.3f}  P@1 {row['precision@1']:.3f}"
+            )
+    if "grammar" in results:
+        g = results["grammar"]
+        print(
+            f"grammar  recall {g['detection_recall']:.3f}  precision {g['detection_precision']:.3f}"
+            f"  false alarms {g['false_alarm_rate']:.3f}"
+        )
+    if "speech" in results:
+        for row in results["speech"]["rows"]:
+            print(
+                f"speech   noise {row['rate']:.2f}  n-best {row['n_best']}  "
+                f"lm-fix {row['lm_fix']:.2f}  "
+                f"false flags {row['false_flags_per_word']:.3f}  found {row['mistake_found']:.3f}"
+            )
+    if "tutor" in results:
+        for name, data in results["tutor"]["policies"].items():
+            print(
+                f"tutor    {name:9} skills known {data['all']['skills_known']:.2f}  "
+                f"wasted {data['all']['wasted_share']:.3f}"
+            )
 
 
 def _print(data: object) -> None:

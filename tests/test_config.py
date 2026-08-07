@@ -14,6 +14,7 @@ def write(tmp_path: Path, text: str) -> Path:
 def test_default_file_loads():
     settings = load_settings()
     assert settings.rag.preset == "ordbro"
+    assert settings.rag.abstain_below == 0.095
     assert settings.llm.enabled is False
     assert settings.data_path.name == "data"
 

@@ -1,0 +1,187 @@
+{
+ "sentences": 27,
+ "trials": 30,
+ "rows": [
+  {
+   "rate": 0.0,
+   "n_best": 1,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.0,
+   "mean_score_correct_speaker": 100.0,
+   "mistake_found": 1.0,
+   "flag_precision": 1.0
+  },
+  {
+   "rate": 0.0,
+   "n_best": 1,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.0,
+   "mean_score_correct_speaker": 100.0,
+   "mistake_found": 0.7358,
+   "flag_precision": 0.7358
+  },
+  {
+   "rate": 0.0,
+   "n_best": 3,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.0,
+   "mean_score_correct_speaker": 100.0,
+   "mistake_found": 1.0,
+   "flag_precision": 1.0
+  },
+  {
+   "rate": 0.0,
+   "n_best": 3,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.0,
+   "mean_score_correct_speaker": 100.0,
+   "mistake_found": 0.4383,
+   "flag_precision": 0.4383
+  },
+  {
+   "rate": 0.05,
+   "n_best": 1,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.0498,
+   "mean_score_correct_speaker": 96.05,
+   "mistake_found": 1.0,
+   "flag_precision": 0.9136
+  },
+  {
+   "rate": 0.05,
+   "n_best": 1,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.0497,
+   "mean_score_correct_speaker": 96.25,
+   "mistake_found": 0.758,
+   "flag_precision": 0.6953
+  },
+  {
+   "rate": 0.05,
+   "n_best": 3,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.002,
+   "mean_score_correct_speaker": 99.9,
+   "mistake_found": 1.0,
+   "flag_precision": 0.9963
+  },
+  {
+   "rate": 0.05,
+   "n_best": 3,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.001,
+   "mean_score_correct_speaker": 99.95,
+   "mistake_found": 0.4938,
+   "flag_precision": 0.4926
+  },
+  {
+   "rate": 0.1,
+   "n_best": 1,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.0976,
+   "mean_score_correct_speaker": 92.45,
+   "mistake_found": 1.0,
+   "flag_precision": 0.8373
+  },
+  {
+   "rate": 0.1,
+   "n_best": 1,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.1015,
+   "mean_score_correct_speaker": 92.11,
+   "mistake_found": 0.7543,
+   "flag_precision": 0.6243
+  },
+  {
+   "rate": 0.1,
+   "n_best": 3,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.0137,
+   "mean_score_correct_speaker": 99.1,
+   "mistake_found": 1.0,
+   "flag_precision": 0.9802
+  },
+  {
+   "rate": 0.1,
+   "n_best": 3,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.0116,
+   "mean_score_correct_speaker": 99.29,
+   "mistake_found": 0.537,
+   "flag_precision": 0.5272
+  },
+  {
+   "rate": 0.2,
+   "n_best": 1,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.203,
+   "mean_score_correct_speaker": 83.84,
+   "mistake_found": 1.0,
+   "flag_precision": 0.6971
+  },
+  {
+   "rate": 0.2,
+   "n_best": 1,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.2001,
+   "mean_score_correct_speaker": 84.07,
+   "mistake_found": 0.8,
+   "flag_precision": 0.5516
+  },
+  {
+   "rate": 0.2,
+   "n_best": 3,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.0576,
+   "mean_score_correct_speaker": 96.16,
+   "mistake_found": 1.0,
+   "flag_precision": 0.9039
+  },
+  {
+   "rate": 0.2,
+   "n_best": 3,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.0626,
+   "mean_score_correct_speaker": 95.87,
+   "mistake_found": 0.6148,
+   "flag_precision": 0.5543
+  },
+  {
+   "rate": 0.3,
+   "n_best": 1,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.2975,
+   "mean_score_correct_speaker": 76.79,
+   "mistake_found": 1.0,
+   "flag_precision": 0.5833
+  },
+  {
+   "rate": 0.3,
+   "n_best": 1,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.3041,
+   "mean_score_correct_speaker": 76.03,
+   "mistake_found": 0.8593,
+   "flag_precision": 0.4989
+  },
+  {
+   "rate": 0.3,
+   "n_best": 3,
+   "lm_fix": 0.0,
+   "false_flags_per_word": 0.1291,
+   "mean_score_correct_speaker": 91.01,
+   "mistake_found": 1.0,
+   "flag_precision": 0.7889
+  },
+  {
+   "rate": 0.3,
+   "n_best": 3,
+   "lm_fix": 0.25,
+   "false_flags_per_word": 0.1339,
+   "mean_score_correct_speaker": 90.81,
+   "mistake_found": 0.6469,
+   "flag_precision": 0.5204
+  }
+ ],
+ "created": "2026-10-19T01:55:07+00:00"
+}
