@@ -15,6 +15,13 @@ export function h(tag, attrs = {}, ...children) {
   return node;
 }
 
+// Like replaceChildren, but skips null, undefined and false like h() does.
+export function fill(node, ...children) {
+  node.replaceChildren();
+  append(node, children);
+  return node;
+}
+
 function append(node, children) {
   for (const child of children.flat()) {
     if (child === undefined || child === null || child === false) continue;

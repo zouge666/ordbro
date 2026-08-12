@@ -1,11 +1,12 @@
 import { api } from "../api.js";
-import { announce, h, icon, loading, meter } from "../dom.js";
+import { announce, fill, h, icon, loading, meter } from "../dom.js";
 import { insertLetter, percent, splitGap } from "../lib/format.js";
 import { canSpeak, speak } from "../speech.js";
 
 const REASONS = {
   adaptive: "Chosen for you: not too easy and not too hard.",
   "words due for review": "These words are due for review.",
+  "new words": "A new word for your review list.",
   "chosen skill": "You chose this skill.",
   review: "Word review with spaced repetition.",
   "all skills mastered": "All skills are mastered. Time to review words.",
@@ -43,7 +44,7 @@ export async function render(root, params) {
     body));
 
   async function load() {
-    body.replaceChildren(loading());
+    fill(body, loading());
     const data = await api.next(focus || null);
     exercise = data.exercise;
     attempt = 1;
@@ -52,21 +53,21 @@ export async function render(root, params) {
     reason.textContent = REASONS[data.reason] || "";
     if (!exercise) {
       title.textContent = "Nothing to practice";
-      masteryBox.replaceChildren();
-      body.replaceChildren(h("div", { class: "card empty" }, "You have seen every word. Come back later for reviews."));
+      fill(masteryBox);
+      fill(body, h("div", { class: "card empty" }, "You have seen every word. Come back later for reviews."));
       return;
     }
     title.textContent = data.skill ? data.skill.name : "Word review";
     showMastery(data.skill ? data.skill.mastery : null, data.skill?.name_da);
-    body.replaceChildren(card());
+    fill(body, card());
   }
 
   function showMastery(value, nameDa) {
     if (value === null || value === undefined) {
-      masteryBox.replaceChildren(h("span", { class: "pill" }, "Spaced repetition"));
+      fill(masteryBox, h("span", { class: "pill" }, "Spaced repetition"));
       return;
     }
-    masteryBox.replaceChildren(
+    fill(masteryBox, 
       nameDa ? h("span", { class: "pill plain da" }, nameDa) : null,
       h("span", { class: "muted small" }, "Mastery"),
       meter(value),
@@ -151,11 +152,11 @@ export async function render(root, params) {
     const pool = h("div", { class: "tokens" });
     const line = h("div", { class: "built tokens", "aria-label": "Your sentence" });
     const draw = () => {
-      line.replaceChildren(...built.map((word, index) =>
+      fill(line, ...built.map((word, index) =>
         h("button", { class: "token", type: "button", onclick: () => { if (!locked) { built.splice(index, 1); draw(); } } }, word)));
       const counts = {};
       for (const word of built) counts[word] = (counts[word] || 0) + 1;
-      pool.replaceChildren(...tokens.map((word) => {
+      fill(pool, ...tokens.map((word) => {
         const used = (counts[word] || 0) > 0;
         if (used) counts[word] -= 1;
         return h("button", { class: `token${used ? " used" : ""}`, type: "button", disabled: used || locked, onclick: () => { built.push(word); draw(); } }, word);
@@ -184,7 +185,7 @@ export async function render(root, params) {
     const tone = result.correct ? "moss" : result.final ? "clay" : "amber";
     const symbol = result.correct ? "check" : result.final ? "cross" : "hint";
     box.className = `feedback notice ${tone} fade-in`;
-    box.replaceChildren(
+    fill(box, 
       h("div", { class: "feedback-title" }, icon(symbol), result.message),
       result.note ? h("p", {}, result.note) : null,
       result.hint ? h("p", {}, result.hint) : null,

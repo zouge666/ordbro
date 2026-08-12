@@ -1,5 +1,5 @@
 import { api } from "../api.js";
-import { h, icon, loading } from "../dom.js";
+import { fill, h, icon, loading } from "../dom.js";
 import { highlight } from "../lib/format.js";
 
 const EXAMPLES = [
@@ -31,9 +31,9 @@ export async function render(root, params) {
   async function ask(question) {
     if (!question.trim()) return;
     history.replaceState(null, "", `#/ask?q=${encodeURIComponent(question)}`);
-    output.replaceChildren(loading());
+    fill(output, loading());
     const data = await api.ask(question);
-    output.replaceChildren(...answerView(data));
+    fill(output, ...answerView(data));
   }
 
   const first = params.get("q");

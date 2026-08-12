@@ -1,5 +1,5 @@
 import { api } from "../api.js";
-import { announce, h, icon, ring } from "../dom.js";
+import { announce, fill, h, icon, ring } from "../dom.js";
 import { canListen, canSpeak, hasDanishVoice, listen, speak } from "../speech.js";
 
 export async function render(root, params) {
@@ -73,8 +73,8 @@ export async function render(root, params) {
     root.querySelector("#level").textContent = sentence.level;
     heard.textContent = "";
     typed.value = "";
-    result.replaceChildren();
-    list.replaceChildren(...sentences.map((s, i) =>
+    fill(result);
+    fill(list, ...sentences.map((s, i) =>
       h("button", { type: "button", "aria-current": i === index ? "true" : "false", onclick: () => { index = i; draw(); } }, s.text)));
   }
 
@@ -88,21 +88,30 @@ export async function render(root, params) {
     const sentence = sentences[index];
     const data = await api.assess(sentence.id, sentence.text, transcript, alts);
     heard.textContent = `We heard: "${data.transcript}"`;
-    result.replaceChildren(
+    fill(result, 
       h("div", { class: "score" }, scoreRing(data.score),
         h("div", {},
           h("strong", {}, data.score >= 90 ? "Very clear!" : data.score >= 60 ? "Good. A few words were hard to understand." : "Let us try that again."),
-          h("p", { class: "muted small" }, `${Math.round(data.word_accuracy * 100)}% of the words were understood.`))),
+          h("p", { class: "muted small" }, summary(data.words)))),
       h("div", { class: "word-chips" }, data.words.map(wordChip)),
       data.tips.length ? h("div", { class: "grid two" }, data.tips.map(tipCard)) : null,
       h("div", { class: "row" },
-        h("button", { class: "btn", type: "button", onclick: () => { result.replaceChildren(); heard.textContent = ""; } }, icon("redo"), "Try again"),
+        h("button", { class: "btn", type: "button", onclick: () => { fill(result); heard.textContent = ""; } }, icon("redo"), "Try again"),
         h("button", { class: "btn ghost", type: "button", onclick: () => move(1) }, "Next sentence", icon("arrow"))));
     announce(`Score ${data.score}.`);
   }
 
   draw();
   return { destroy: () => recognition?.abort?.() };
+}
+
+function summary(words) {
+  const targets = words.filter((w) => w.target);
+  const ok = targets.filter((w) => w.status === "ok").length;
+  const close = targets.filter((w) => w.status === "close").length;
+  const parts = [`${ok} of ${targets.length} words matched exactly`];
+  if (close) parts.push(`${close} ${close === 1 ? "was" : "were"} close`);
+  return `${parts.join(", ")}.`;
 }
 
 function scoreRing(score) {

@@ -1,5 +1,5 @@
 import { api } from "../api.js";
-import { h, icon, loading } from "../dom.js";
+import { fill, h, icon, loading } from "../dom.js";
 import { insertLetter } from "../lib/format.js";
 
 const EXAMPLE = "Jeg hedder Omar. I dag jeg går på arbejde. Jeg har en hus og to stor biler. Jeg kan taler lidt dansk, fordi jeg har ikke tid til at øve.";
@@ -45,9 +45,9 @@ export async function render(root) {
 
   async function check() {
     if (!text.value.trim()) return;
-    output.replaceChildren(loading());
+    fill(output, loading());
     const data = await api.check(text.value);
-    output.replaceChildren(...resultView(data));
+    fill(output, ...resultView(data));
   }
 }
 
@@ -96,9 +96,9 @@ function issueRow(issue, index) {
 }
 
 async function openNote(docId, box) {
-  if (box.childElementCount) { box.replaceChildren(); return; }
+  if (box.childElementCount) { fill(box); return; }
   const note = await api.note(docId);
-  box.replaceChildren(h("div", { class: "source" },
+  fill(box, h("div", { class: "source" },
     h("div", { class: "source-head" }, icon("book"), h("strong", {}, note.title), h("span", { class: "pill plain" }, note.level)),
     ...note.sections.map((s) => h("div", { class: "stack", style: { gap: "0.2rem", marginBottom: "0.6rem" } },
       h("strong", { class: "small" }, s.heading),

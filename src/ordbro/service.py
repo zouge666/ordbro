@@ -63,7 +63,9 @@ class Ordbro:
         if not self.graph.has(item.skill):
             return None
         skill = self.graph.get(item.skill)
-        query = " ".join(part for part in (item.explanation, item.text, skill.name_da) if part)
+        # the answer is already shown at this point, so it can help find the rule
+        parts = (item.explanation, item.hint, item.text, item.answers[0], skill.name_da)
+        query = " ".join(part for part in parts if part)
         result = self.kb.search(query, top_k=1, filters={"doc_id": list(skill.notes)})
         if not result.hits:
             return None

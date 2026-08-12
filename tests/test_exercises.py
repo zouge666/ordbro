@@ -105,3 +105,15 @@ def test_next_follows_policy_mode(setup):
     assert reason == "adaptive" and item.skill == "greetings" and item.mode == "recognize"
     item, reason = eng.next(state, NOW, focus="negation")
     assert item.skill == "negation" and reason == "chosen skill"
+
+
+def test_mixed_practice_brings_in_new_words(setup):
+    eng = engine(setup)
+    state = LearnerState("t")
+    kinds = []
+    for _ in range(12):
+        item, reason = eng.next(state, NOW)
+        kinds.append(reason)
+        eng.answer(state, item.id, item.answers[0], 1, NOW)
+    assert "new words" in kinds
+    assert state.cards

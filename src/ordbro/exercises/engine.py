@@ -26,6 +26,7 @@ Explainer = Callable[[Exercise], dict[str, Any] | None]
 
 _PRAISE = ("Right!", "Correct!", "Well done!", "Yes, that is it!")
 RECENT_WINDOW = 15
+WORD_EVERY = 5  # in mixed practice, about every fifth item is a word card
 
 
 @dataclass
@@ -89,13 +90,13 @@ class ExerciseEngine:
             return self.next_review(state, now), "review"
         if focus and focus in self.by_skill:
             return self.for_skill(state, focus), "chosen skill"
-        recent_types = [e.get("type") for e in state.history[-3:]]
-        if (
-            state.due_cards(now)
-            and "flashcard" not in recent_types
-            and "translate" not in recent_types
-        ):
-            return self.next_review(state, now), "words due for review"
+        recent = [str(e.get("exercise", "")) for e in state.history[-WORD_EVERY:]]
+        words_recently = any(eid.startswith("card:") for eid in recent)
+        if len(state.history) >= WORD_EVERY - 1 and not words_recently:
+            if state.due_cards(now):
+                return self.next_review(state, now), "words due for review"
+            if self._new_card(state):
+                return self.next_review(state, now), "new words"
         skill = self.policy.next_skill(state)
         if skill is None:
             return self.next_review(state, now), "all skills mastered"
@@ -117,10 +118,11 @@ class ExerciseEngine:
             card = due[0]
             direction = "da-en" if card.reps < 2 else "en-da"
             return self._card_item(card.item_id, direction)
-        for card_id in self._card_order:
-            if card_id not in state.cards:
-                return self._card_item(card_id, "da-en")
-        return None
+        card_id = self._new_card(state)
+        return self._card_item(card_id, "da-en") if card_id else None
+
+    def _new_card(self, state: LearnerState) -> str | None:
+        return next((cid for cid in self._card_order if cid not in state.cards), None)
 
     def _card_item(self, card_id: str, direction: str) -> Exercise | None:
         pos, _, word = card_id.partition(":")
